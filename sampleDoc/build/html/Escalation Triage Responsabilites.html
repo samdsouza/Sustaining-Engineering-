@@ -87,7 +87,10 @@
 <li class="toctree-l1"><a class="reference internal" href="Tools.html">Tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Definitions.html">Definitions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Monitoring Escalations.html">Monitoring Escalations</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Escalation Triage Responsabilites</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Escalation Triage Responsabilites</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#escalation-priority">Escalation Priority</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Issue Types.html">Issue Types</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Creating Escalations.html">Creating Escalations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Triage.html">Triage</a></li>
@@ -173,7 +176,176 @@
             
   <div class="section" id="escalation-triage-responsabilites">
 <h1>Escalation Triage Responsabilites<a class="headerlink" href="#escalation-triage-responsabilites" title="Permalink to this headline">¶</a></h1>
-<p>Welcome to the Escalation Triage Responsabilities page</p>
+<ol class="arabic">
+<li><dl class="first docutils">
+<dt>Watch “Need Triage” queue for incoming tickets.</dt>
+<dd><ol class="first last loweralpha">
+<li><p class="first">If ticket type = ‘Solved DU/DL/DC’ do the following:</p>
+<blockquote>
+<div><p>(I). Add “Element Version”, “Components”, other fields with as much detail as possible.</p>
+<p>(II). Take ownership of the ticket and immediately resolve it. There should be no asks from Sustaining in this ticket. The ticket is merely for tracking purposes. If there are asks from Sustaining in the ticket, move the ticket to a “CPE DU/DL/DC” ticket type and finish triaging the ticket as normal.</p>
+</div></blockquote>
+</li>
+<li><p class="first">If the ticket is for a POC cluster, see a manager or team lead to discuss the escalation in more detail before exiting triage.</p>
+</li>
+<li><p class="first">If a ticket comes in that is blatantly missing the majority of vital information and there is no indication that support did their due dilligence to investigate the issue before escalating, tag the “<strong>Labels</strong>” field with ‘SupportIssue’.</p>
+<blockquote>
+<div><p>(I). <strong>Note</strong>: this will cause the Sustaining Management to follow up with Support Management about the case so don’t mark this field lightly – only when there are serious issues in the ticket.</p>
+</div></blockquote>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>When a new ticket comes in:</dt>
+<dd><ol class="first last loweralpha simple">
+<li>Tag the ticket as being triaged by commenting - “Escalation triage - conducting first pass”.</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Review new tickets for completeness:</dt>
+<dd><ol class="first last loweralpha">
+<li><p class="first">Tag “Components” field</p>
+</li>
+<li><p class="first">Tag “Dev Vertical” field (Note: you need to click Edit to find this field).</p>
+<blockquote>
+<div><p>(I). “Dev Vertical” corresponds to what area of the organization this case relates to.</p>
+<p>(II). The options are: HCL, Platform, ELement or Ecosystem</p>
+<blockquote>
+<div><p>(1). If the vertical is HCL, please add Stephanie Scheffler to the Watchers list.</p>
+</div></blockquote>
+</div></blockquote>
+</li>
+<li><p class="first">Accurate timeline of the issue.</p>
+<blockquote>
+<div><p>(I). Look for an issue start time/date and an issue resolved time/date.</p>
+</div></blockquote>
+</li>
+<li><p class="first">Check for correct log bundle path on scratch.</p>
+</li>
+<li><p class="first">If anything you deem is important is missing from the ticket, engage support with any clarifications/questions needef for the ticket.</p>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>If the ticket is missing vital information, move the ticket to “Need More Information”.</dt>
+<dd><ol class="first last loweralpha simple">
+<li>This will move the ticket to the “Need More Information (NMI)” queue.</li>
+<li>Return the ticket to “Need Triage” once support has replied and you feel sufficient information has been provided.</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Once the ticket looks complete, begin a quick check of the logs, AIQ, or wherever is applicable to conduct a brief review of the case.</dt>
+<dd><ol class="first last loweralpha simple">
+<li>Spend no moer than 30 minutes doing so.</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Update the ticket with any findings or speculations found for the issue.</dt>
+<dd><ol class="first last loweralpha simple">
+<li>Even if you are unable to conduct any quick review, add a comment to the case that it has been triaged and will be moved to the “Queue” status.</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p class="first"><strong>Move the ticket to “In Queue” status.</strong></p>
+</li>
+<li><p class="first"><strong>Notify team via HipChat in ‘CPE-Support’ room that a new ticket has been triaged and is ready to be picked up.</strong></p>
+</li>
+<li><p class="first"><strong>If a ticket has not been picked up that needs to be assigned, contact Sustaining Manager or manager on-call.</strong></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Triage responsibility rotates with the on-call schedule; if you are on-call then you have the responsibility of triaging incoming cases.</p>
+<p class="last">It’s a good idea to have an idea of what issues and customers are “hot” at the time of your triaging; you can find a list of these cases <strong>HERE</strong>. If an issue comes in from a ”   hot” customer, you should let a Sustaining Manager know.</p>
+</div>
+<table border="1" class="colwidths-given docutils" id="id1">
+<caption><span class="caption-text"><strong>Triage Response Time Objectives</strong></span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">&#160;</th>
+<th class="head">Triaged</th>
+<th class="head">Assigned</th>
+<th class="head">Response from assignee</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>Live</strong></td>
+<td>NA</td>
+<td>20 minutes from escalation creation</td>
+<td>30 minutes from escalation creation</td>
+</tr>
+<tr class="row-odd"><td><strong>High</strong></td>
+<td>2 business hours from escalation creation</td>
+<td>4 business hours from escalation creation</td>
+<td>8 business hours from escalation creation</td>
+</tr>
+<tr class="row-even"><td><strong>Med</strong></td>
+<td>2 business hours from escalation creation</td>
+<td>12 business hours from escalation creation</td>
+<td>2 business days from escalation creation</td>
+</tr>
+</tbody>
+</table>
+<p><em>Response Time Objectives - Business Hours are 9-5 MT</em></p>
+<p><strong>The triage engineer can also adjust the priority of the escalation which by default, is not set, and labeled UNKNOWN</strong></p>
+<div class="section" id="escalation-priority">
+<h2>Escalation Priority<a class="headerlink" href="#escalation-priority" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/highest.png" src="_images/highest.png" />
+<img alt="_images/high.png" src="_images/high.png" />
+<img alt="_images/medium.png" src="_images/medium.png" />
+<img alt="_images/low.png" src="_images/low.png" />
+<img alt="_images/lowest.png" src="_images/lowest.png" />
+<img alt="_images/unknown.png" src="_images/unknown.png" />
+<table border="1" class="colwidths-given docutils" id="id2">
+<caption><span class="caption-text"><strong>Escalation Priority</strong></span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">State</th>
+<th class="head">Priority</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>A DU/DL/DC is Pending in a short time frame (mins to hours)</td>
+<td>Highest</td>
+</tr>
+<tr class="row-odd"><td>Will occur often / business sensitivity to the esclation or account / Emails from support managers etc, asking from a shift in the speed of pickup</td>
+<td>High</td>
+</tr>
+<tr class="row-even"><td>Prioritize depending on business impact</td>
+<td>Medium</td>
+</tr>
+<tr class="row-odd"><td>Not regular cases (unique or one off situation)</td>
+<td>Low</td>
+</tr>
+<tr class="row-even"><td>Request for Enhancement (RFE)</td>
+<td>Lowest</td>
+</tr>
+<tr class="row-odd"><td>Need Triage / Not looked at yet</td>
+<td>Unknown</td>
+</tr>
+</tbody>
+</table>
+<p>This priority setting will adjust the In Queue view and prioritise the escalations with priority over the FIFO queue.</p>
+</div>
 </div>
 
 

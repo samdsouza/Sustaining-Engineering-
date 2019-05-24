@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Welcome to Sam D’Souza’s documentation! &mdash; samply 0.0.1 documentation</title>
+  <title>Current Product Engineering (CPE) Handbook (After May 23, 2019) &mdash; samply 0.0.1 documentation</title>
   
 
   
@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="intro" href="intro.html" /> 
+    <link rel="next" title="Tools" href="Tools.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -80,15 +80,13 @@
             
             
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="intro.html">intro</a></li>
-<li class="toctree-l1"><a class="reference internal" href="strings.html">strings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tools.html">Tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Definitions.html">Definitions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Monitoring Escalations.html">Monitoring Escalations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Escalation Triage Responsabilites.html">Escalation Triage Responsabilites</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Issue Types.html">Issue Types</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Creating Escalations.html">Creating Escalations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ticket LifeCycle.html">Ticket LifeCycle</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Triage.html">Triage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Select an Escalation from the FIFO Q.html">Select an Escalation from the FIFO Q</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Assign yourself an Escalation from the FIFO Q.html">Assign yourself an Escalation from the FIFO Q</a></li>
@@ -151,7 +149,7 @@
     
       <li><a href="#">Docs</a> &raquo;</li>
         
-      <li>Welcome to Sam D’Souza’s documentation!</li>
+      <li>Current Product Engineering (CPE) Handbook (After May 23, 2019)</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -170,35 +168,55 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="welcome-to-sam-d-souza-s-documentation">
-<h1>Welcome to Sam D’Souza’s documentation!<a class="headerlink" href="#welcome-to-sam-d-souza-s-documentation" title="Permalink to this headline">¶</a></h1>
-</div>
+  <div class="section" id="current-product-engineering-cpe-handbook-after-may-23-2019">
+<h1>Current Product Engineering (CPE) Handbook (After May 23, 2019)<a class="headerlink" href="#current-product-engineering-cpe-handbook-after-may-23-2019" title="Permalink to this headline">¶</a></h1>
+<p>When selecting an escalation ticket to assign to yourself from the FIFO Q, do the following:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Pull the oldest ‘DU/DL/DC’ ticket.</li>
+<li>If no ‘DU/DL/DC’ tickets, pull the oldest ‘CPE Escalation’ ticket.</li>
+</ol>
+</div></blockquote>
 <div class="section" id="table-of-contents">
-<h1>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h1>
-<p>Here is some text explaining some stuff.:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="s2">&quot;hello&quot;</span>
-<span class="o">&gt;&gt;</span> <span class="n">Hello</span>
-</pre></div>
-</div>
-<div class="section" id="guide">
-<h2>Guide<a class="headerlink" href="#guide" title="Permalink to this headline">¶</a></h2>
+<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="intro.html">intro</a></li>
-<li class="toctree-l1"><a class="reference internal" href="strings.html">strings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tools.html">Tools</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Tools.html#jira-csd">JIRA / CSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tools.html#victorops">VictorOps</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Definitions.html">Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Definitions.html">Definitions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Definitions.html#escalations">Escalations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Definitions.html#defects-bugs">Defects/Bugs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Definitions.html#enhancements">Enhancements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Definitions.html#du-dl-dc">DU/DL/DC</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Monitoring Escalations.html">Monitoring Escalations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Escalation Triage Responsabilites.html">Escalation Triage Responsabilites</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Issue Types.html">Issue Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Escalation Triage Responsabilites.html">Escalation Triage Responsabilites</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Escalation Triage Responsabilites.html#escalation-priority">Escalation Priority</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Issue Types.html">Issue Types</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Issue Types.html#escalation-types">Escalation Types</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Creating Escalations.html">Creating Escalations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ticket LifeCycle.html">Ticket LifeCycle</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Ticket LifeCycle.html#escalations-du-dl-dc-and-help-tickets">Escalations, DU/DL/DC and Help Tickets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ticket LifeCycle.html#solved-du-dl-dc">Solved DU/DL/DC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ticket LifeCycle.html#test-request">Test Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ticket LifeCycle.html#hotfix-idr-d-patches">Hotfix/IDR/D-patches</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ticket LifeCycle.html#cpe-defects">CPE Defects</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Triage.html">Triage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Select an Escalation from the FIFO Q.html">Select an Escalation from the FIFO Q</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Assign yourself an Escalation from the FIFO Q.html">Assign yourself an Escalation from the FIFO Q</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Assign yourself an Escalation from the FIFO Q.html">Assign yourself an Escalation from the FIFO Q</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Assign yourself an Escalation from the FIFO Q.html#hi-and-aiq-escalations">HI and AIQ Escalations</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Working an Escalation.html">Working an Escalation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Resolving an Emergency Call-out ticket type.html">Resolving an Emergency Call-out ticket type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Resolving an Escalation (CPE DU |DL |DC, CPE Escalations and CPE Help).html">Resolving an Escalation (CPE DU | DL | DC, CPE Escalations and CPE Help)</a></li>
@@ -206,7 +224,10 @@
 <li class="toctree-l1"><a class="reference internal" href="BugCourt.html">BugCourt</a></li>
 <li class="toctree-l1"><a class="reference internal" href="On-Call.html">On-Call</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Escalating Development.html">Escalating Development</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Escalation Manager.html">Escalation Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Escalation Manager.html">Escalation Manager</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Escalation Manager.html#responsability">Responsability</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Creating a Case for Escalation Managers (CPE Esc Mgmt).html">Creating a Case for Escalation Managers (CPE Esc Mgmt)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Working D-patches (aka Hotfixes).html">Working D-patches (aka Hotfixes)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sustaining Engineering Support Targetted Commitments.html">Sustaining Engineering Support Targetted Commitments</a></li>
@@ -234,7 +255,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="intro.html" class="btn btn-neutral float-right" title="intro" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Tools.html" class="btn btn-neutral float-right" title="Tools" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>

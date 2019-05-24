@@ -1,31 +1,26 @@
 
-Welcome to Sam D'Souza's documentation!
+Current Product Engineering (CPE) Handbook (After May 23, 2019) 
 ==================================
 
+When selecting an escalation ticket to assign to yourself from the FIFO Q, do the following: 
 
-Table of Contents 
-===================================
+	1. Pull the oldest 'DU/DL/DC' ticket. 
+	2. If no 'DU/DL/DC' tickets, pull the oldest 'CPE Escalation' ticket. 
 
-Here is some text explaining some stuff.::
 
-	print "hello"
-	>> Hello 
-Guide
-^^^^^
+Table of Contents
+^^^^^^^^^^^^^^^^^
  
 .. toctree::
    :maxdepth: 2
 
-   intro
-   strings 
-   Overview
    Tools 
    Definitions 
    Monitoring Escalations 
    Escalation Triage Responsabilites 
    Issue Types 
    Creating Escalations 
-   Ticket Lifecycle 
+   Ticket LifeCycle 
    Triage 
    Select an Escalation from the FIFO Q 
    Assign yourself an Escalation from the FIFO Q 
