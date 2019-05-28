@@ -93,7 +93,6 @@
 <li class="toctree-l1"><a class="reference internal" href="Assign yourself an Escalation from the FIFO Q.html">Assign yourself an Escalation from the FIFO Q</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Working an Escalation.html">Working an Escalation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Resolving an Emergency Call-out ticket type.html">Resolving an Emergency Call-out ticket type</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Resolving an Escalation (CPE DU |DL |DC, CPE Escalations and CPE Help).html">Resolving an Escalation (CPE DU | DL | DC, CPE Escalations and CPE Help)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Hardware RCA | FA etc.html">Hardware RCA | FA etc</a></li>
 <li class="toctree-l1"><a class="reference internal" href="BugCourt.html">BugCourt</a></li>
 <li class="toctree-l1"><a class="reference internal" href="On-Call.html">On-Call</a></li>
@@ -104,6 +103,11 @@
 <li class="toctree-l2"><a class="reference internal" href="#definition-of-a-d-patch">Definition of a D-patch</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#creating-a-d-patch-request">Creating a D-Patch Request</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#test-plan-story-acceptance-criteria">Test Plan Story Acceptance Criteria</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#process-guide-for-the-developer-and-test">Process Guide for the Developer and Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#d-patch-manifest-the-documentation-for-a-d-patch">D-Patch Manifest (the documentation for a D-Patch)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#test-execution">Test Execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#working-defects-found-against-a-d-patch-during-testing">Working Defects found against a D-Patch during testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#final-release-steps">Final Release Steps</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Sustaining Engineering Support Targetted Commitments.html">Sustaining Engineering Support Targetted Commitments</a></li>
@@ -179,11 +183,11 @@
 <h1>Working D-patches (aka Hotfixes)<a class="headerlink" href="#working-d-patches-aka-hotfixes" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="definition-of-a-d-patch">
 <h2>Definition of a D-patch<a class="headerlink" href="#definition-of-a-d-patch" title="Permalink to this headline">¶</a></h2>
-<p>A D-patch is defined as any change to a customers cluster this includes new binaries, changes, additions to configurations. It also includes constant changes, diagnostic changes, etc. The Sustaining Engineer in conjunction with the support engineer can request a D-patch. Typically these are per customer per issue but in some more systemic conditions can be made available to all customers.</p>
+<p>A D-patch is defined as any change to a customers cluster; this includes new binaries, changes, additions to configurations. It also includes constant changes, diagnostic changes, etc. The Sustaining Engineer in conjunction with the Support Engineer can request a D-patch. Typically these are per customer per issue but in some more systemic conditions, can be made available to all customers.</p>
 </div>
 <div class="section" id="creating-a-d-patch-request">
 <h2>Creating a D-Patch Request<a class="headerlink" href="#creating-a-d-patch-request" title="Permalink to this headline">¶</a></h2>
-<p>D-patches are worked in the Sustaining project (SUST). To request a d-patch, create an Epic under the project describing the ask for the d-patch. This Epic will then be put on the backlog for prioritization.</p>
+<p>D-patches are worked in the Sustaining Project (SUST). To request a d-patch, create an Epic under the project describing the ask for the d-patch. This Epic will then be put on the backlog for prioritization.</p>
 <p>Ensure the following items are filled in.</p>
 <blockquote>
 <div><ol class="arabic simple">
@@ -235,6 +239,210 @@
 <li><p class="first">Test Plan document is approved by Developer and Test Lead</p>
 </li>
 <li><p class="first">Story or Stories for the the test development and execution</p>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="process-guide-for-the-developer-and-test">
+<h2>Process Guide for the Developer and Test<a class="headerlink" href="#process-guide-for-the-developer-and-test" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>(Dev) Take ownership of the development story or stories you are working on and set the status to Construction.</li>
+<li><dl class="first docutils">
+<dt>(Dev) Developer builds the d-patch</dt>
+<dd><ul class="first last">
+<li>If the d-patch is a new binary (sfapp replacement or other Element based code), please review the <a class="reference external" href="https://docs.google.com/document/d/1mSdiqnXXvtz2-FvZ8iBEn6G5HkT0eqpOTvZxBeeuOVI/edit#heading=h.8ntaok2dtyx3">Building a Hotfix</a> document <strong>before</strong> starting your d-patch. The kiln repositories that are used to create d-patches are setup on the first request for a patch for a specific version of Element. If the version you need is not there work with B&amp;R to get the repository/branch created. Once the GA repository is created you can simply create your patch branch from that repository. Currently, the following GA release repositories are created :</li>
+<li><a class="reference external" href="https://solidfire.kilnhg.com/Auth/LogOn?ReturnUrl=/Code/Repositories/SolidFire/fluorine-ga&amp;nr=">Fluorine-ga</a></li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://solidfire.kilnhg.com/Auth/LogOn?ReturnUrl=/Code/Repositories/SolidFire/neon-ga&amp;nr=">Neon-ga</a></dt>
+<dd><ul class="first last">
+<li><a class="reference external" href="https://solidfire.kilnhg.com/Auth/LogOn?ReturnUrl=/Code/Repositories/SolidFire/neon-patch1-ga&amp;nr=">neon-patch1-ga</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Once the d-patch and manifest are developed, reviewed, and declared ready for test, the files need to be loaded on bdr-jenkins using your LDAP login.</dt>
+<dd><ul class="first last">
+<li>Login to bdr-jenkins using your LDAP login.</li>
+<li>Change to the /repo/primary/sf-archive/support/hotfixes directory.</li>
+<li>Create a directory named after the bug that is being patched (e.g. EOS-1235, PE-567, etc.). If the issue does not have a bug or feature request, and the d-patch is simply for diagnostic purposes, create a ticket under the D-Patch CSD number.</li>
+<li>Ensure that permissions of the new directory are correctly set to 0755 (drwxr-xr-x).</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>(Test) While the development work is being done, the test team can pick up the test stories and work any test development that needs to be done.</dt>
+<dd><ul class="first last">
+<li>Examples of test development are: test plan development, test framework, automated testing, etc.</li>
+<li>While this work is being done, the stories associated with the test work should be in the construction phase.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>(Dev) Once the development work is done move the stories to integration and initiate a pull request or other code review process.</li>
+<li>(Dev) Once code review is complete, notify the test team that the code is ready by updating the Test Story with the location of the manifest and D-Patch files, including the md5 and sha256 checksums of the review.</li>
+<li><dl class="first docutils">
+<dt>(Test) Once the test story locations for the manifest and D-Patch are provided, testing can begin.</dt>
+<dd><ul class="first last">
+<li>Test Stories should now be in the integration phase as well.</li>
+<li><dl class="first docutils">
+<dt>If bugs are found</dt>
+<dd><ul class="first last">
+<li>(Test) Create a defect in the Sustaining (SUST) project and link it to the Epic. This linkage can be directly under the Epic as a parent, or if the D-Patch Epic is complete, then simply link the defect as an issue.</li>
+<li>If the defect is blocking continued testing, please be sure to put stories that are blocked in the blocked status.</li>
+<li>As defects are fixed, continue testing.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>If no bugs are found or all defects found are fixed:</dt>
+<dd><ul class="first last">
+<li>Complete the test work, and set the test story to Done.</li>
+<li>Assign the test story back to the test engineer for acceptance.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>HANDOFF: Will be done via the Standup and Communication between the Development and Test Product Owners.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="d-patch-manifest-the-documentation-for-a-d-patch">
+<h2>D-Patch Manifest (the documentation for a D-Patch)<a class="headerlink" href="#d-patch-manifest-the-documentation-for-a-d-patch" title="Permalink to this headline">¶</a></h2>
+<p>The Manifest can be created as part of the development work on the D-Patch, and should be sent out for review at the same time that the code is sent out for review.</p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="first docutils">
+<dt>(Dev) As part of the deliverables for a d-patch, we create a Manifest document to describe the following:</dt>
+<dd><ul class="first last">
+<li>What the purpose of the D-Patch is, including the defect being d-patched, as well as the customer impact.</li>
+<li>Risk associated with the d-patch and any mitigation for those risks</li>
+<li>The contents of the D-Patch.</li>
+<li>Installation, Execution, Back-Out process and/or Uninstall</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Start with the D-Patch Manifest Template located <a class="reference external" href="https://docs.google.com/document/d/1oCzqxnF68P6kDQiNJpEDS99W5WT0gjoswQSNNFbX5ks/edit">here</a> .</dt>
+<dd><ul class="first last">
+<li>Click on File -&gt; Make a copy and create a manifest with the name of D-Patch Manifest &lt;Defect Identifier&gt; (e.g. D-Patch Manifest EOS-1234). If you check the “Copy comments and suggestions” you can easily resolve the helper comments for each of the portions that need to be filled out.</li>
+<li>Fill out the copy with the information required.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>(Dev) Once the D-Patch Manifest has been reviewed and all conerns addressed create the SBR (Build &amp; Release) ticket to start the process for publishing the D-Patch.</dt>
+<dd><ul class="first last">
+<li>When creating the SBR ticket link it back to the D-Patch Epic.</li>
+<li>Intially if testing is not complete, only add the Manifest Link to the SBR ticket so that the taxonomy can be created ahead of time.</li>
+<li>Once testing is complete, add the link to the D-Patch files and add a comment that the D-Patch is ready for posting.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="test-execution">
+<h2>Test Execution<a class="headerlink" href="#test-execution" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="first docutils">
+<dt>(Test) review the manifest and start the test effort design and documentation process.</dt>
+<dd><ul class="first last">
+<li>The Sustaining Test engineer uses the Manifest and the files that are given to Build and Release to publish. NOTE: <em>A build or script directly from the Developers workstation should not be used for validation.</em></li>
+<li><dl class="first docutils">
+<dt>Sustaining will use the <a class="reference external" href="https://netapp-my.sharepoint.com/:w:/p/htad/EVy4bFV5rqdJnklPHqygPNQBrwnLLcFbb8_7fOPVk9YizA?rtime=MBUJGqvj1kg">SFGSUST-D-Patch-Release-Qualification-Plan(JIRA-XXXX)</a> template to outline the test/validation effort. This includes environment prerequistes, test and validation minimum standard of care, additionally called out validation efforts and any custom post validation.</dt>
+<dd><ul class="first last">
+<li>A review of the test plan should be done between the test engineer and the development engineer to satisfy any testing that may be missed.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>The <a class="reference external" href="https://confluence.ngage.netapp.com/display/CPE/%5BCPE%5D+AT2+Framework">CPE AT2 Frame work parent task</a> will be leveraged or Valence to set the CPE minimum standard of care for all validations.</dt>
+<dd><ul class="first last">
+<li>CPE will enter the AT2 task options used during the D-Patch validation effort in the <a class="reference external" href="https://docs.google.com/spreadsheets/d/1EgbIkgUmzUrbN5hWeS46xCM8LH9a_tH8O78t_Kzq8pI/edit#gid=37442893">[CPE] Test frameWork B-x.x (Functional Description)V2</a> . The tester will clone this sheet and configure specifically for the test effort.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>The <a class="reference external" href="https://netapp-my.sharepoint.com/:w:/p/htad/EVy4bFV5rqdJnklPHqygPNQBrwnLLcFbb8_7fOPVk9YizA?rtime=jZUrQqzj1kg">SFGSUST-D-Patch-Release-Qualification-Plan(JIRA-XXXX)</a> will be completed prior to the hand-off to Dev.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>(Test) if Sustaining Test finds a defect,</dt>
+<dd><ul class="first last">
+<li>Create a defect and link it to the Epic using the Epic link in the defect creation page.</li>
+<li>If the defect is found after the d-patch is released and the Epic has been closed, do NOT re-open the Epic, but create a defect and link it to the Epic as it relates to.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="working-defects-found-against-a-d-patch-during-testing">
+<h2>Working Defects found against a D-Patch during testing<a class="headerlink" href="#working-defects-found-against-a-d-patch-during-testing" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>(Dev) Developer moves the ‘Defect’ issue to ‘Construction’</li>
+<li><dl class="first docutils">
+<dt>(Dev) Work on fixing the defect as you would any other defect.</dt>
+<dd><ul class="first last">
+<li>Create the fix (defect status is Construction)</li>
+<li>Submit for code review (defect status is integration)</li>
+<li>Make sure all checksums are updated on both bdr-jenkins as well as in the manifest.</li>
+<li>Update the manifest version.</li>
+<li>Re-publish the changes to bdr-jenkins following the same process above.</li>
+<li>Move the defect to Done state and re-assign to the perosn that filled defect.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>(Test) Once the defect has been moved to Done, and re-assigned for acceptance.</li>
+<li><dl class="first docutils">
+<dt>(Test) Re-test and ensure that the defect is fixed.</dt>
+<dd><ul class="first last">
+<li>If not re-assign to the developer, and set status to Construction.</li>
+<li>If fixed, set the status to Accepted, and remove any blocked status for the test story.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="final-release-steps">
+<h2>Final Release Steps<a class="headerlink" href="#final-release-steps" title="Permalink to this headline">¶</a></h2>
+<p>An SBR ticket should have been created once the Manifest taxonomy (top portion describing the D-Patch) is complete to give Build &amp; Release team a heads up and they can start planning for the D-Patch release. If this ticket was not created earlier create the ticket in the SBR project.</p>
+<blockquote>
+<div><ul>
+<li><p class="first">(Dev) Update or Submit a SF Build and Release Service Request (SBR) nGage ticket using the following template. The answers below are typical answers in most cases.</p>
+<blockquote>
+<div><ul class="simple">
+<li>Product: Element D-Patch</li>
+<li>Build Version or Branch: DPatch for Case xxxxxx (JIRA Case Number)</li>
+<li>Required When: Please give B&amp;R at least 8 hours to perform the posting, unless a earlier time has been agreed to</li>
+<li>Supporting Documentation to include in Release Announcement: Link to Manifest doc - This should be a link to the final google doc if releasing to NSS.</li>
+<li>Comments: Describe any nuances about this DPatch posting.</li>
+<li>What are the file names to be posted?: List the deliverables for this DPatch, including the md5 and sha256 checksum file, Manifest PDF and the DPatch executables.</li>
+<li>These should be the same location that was given to the test team.</li>
+</ul>
+</div></blockquote>
 </li>
 </ul>
 </div></blockquote>

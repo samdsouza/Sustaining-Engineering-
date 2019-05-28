@@ -36,7 +36,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Select an Escalation from the FIFO Q" href="Select an Escalation from the FIFO Q.html" />
-    <link rel="prev" title="Creating Escalations" href="Creating Escalations.html" /> 
+    <link rel="prev" title="Ticket LifeCycle" href="Ticket LifeCycle.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -81,21 +81,18 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="intro.html">intro</a></li>
-<li class="toctree-l1"><a class="reference internal" href="strings.html">strings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tools.html">Tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Definitions.html">Definitions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Monitoring Escalations.html">Monitoring Escalations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Escalation Triage Responsabilites.html">Escalation Triage Responsabilites</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Issue Types.html">Issue Types</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Creating Escalations.html">Creating Escalations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ticket LifeCycle.html">Ticket LifeCycle</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Triage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Select an Escalation from the FIFO Q.html">Select an Escalation from the FIFO Q</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Assign yourself an Escalation from the FIFO Q.html">Assign yourself an Escalation from the FIFO Q</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Working an Escalation.html">Working an Escalation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Resolving an Emergency Call-out ticket type.html">Resolving an Emergency Call-out ticket type</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Resolving an Escalation (CPE DU |DL |DC, CPE Escalations and CPE Help).html">Resolving an Escalation (CPE DU | DL | DC, CPE Escalations and CPE Help)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Hardware RCA | FA etc.html">Hardware RCA | FA etc</a></li>
 <li class="toctree-l1"><a class="reference internal" href="BugCourt.html">BugCourt</a></li>
 <li class="toctree-l1"><a class="reference internal" href="On-Call.html">On-Call</a></li>
@@ -107,6 +104,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Incident Reviews.html">Incident Reviews</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Quality Metrics.html">Quality Metrics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Scratch Usage Policy.html">Scratch Usage Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Acronyms.html">Acronyms</a></li>
 </ul>
 
             
@@ -173,7 +171,24 @@
             
   <div class="section" id="triage">
 <h1>Triage<a class="headerlink" href="#triage" title="Permalink to this headline">¶</a></h1>
-<p>Welcoem</p>
+<ul>
+<li><p class="first">When a CSD ticket of the type ‘CPE DU/DL/DC’, ‘CPE Escalation’, ‘CPE Management’, or ‘CPE Help’ is created, it will have the status, ‘Need Triage’. These cases will be put in the Escalations Requiring Triage queue in the CSD JIRA Service Desk:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a href="#id1"><span class="problematic" id="id2">**</span></a>INSERT IMAGE OF ESCALATIONS REQUIRING TRIAGE **</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">The team doing triage will then analyze the tickets and determine if they can move forward to the ‘Sustaining Escalations Waiting to be Assigned’ queue from where the CPE team will pull the issues to be worked on.</p>
+</li>
+<li><p class="first">If the tickets in ‘Need Triage’ are incomplete and need more information (e.g. logs), the perosn doing triage will move the tickets to the ‘Need More Info’ status while keeping the ‘assignee’ field empty (i.e. unassigned). The queue ‘Sustaining Escalations Waiting on Data’ will display these issues.</p>
+</li>
+</ul>
+<img alt="_images/bestData.png" src="_images/bestData.png" />
+<ul class="simple">
+<li>Once the tickets are complete, the person doing traige will move the ticket back to the ‘Need Traige’ status</li>
+<li>Once the ticket has been triaged, the person doing triage will move the ticket to ‘Sustaining Escalations Waiting to be Assigned’ while leaving it unassigned</li>
+</ul>
 </div>
 
 
@@ -187,7 +202,7 @@
         <a href="Select an Escalation from the FIFO Q.html" class="btn btn-neutral float-right" title="Select an Escalation from the FIFO Q" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="Creating Escalations.html" class="btn btn-neutral float-left" title="Creating Escalations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Ticket LifeCycle.html" class="btn btn-neutral float-left" title="Ticket LifeCycle" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
