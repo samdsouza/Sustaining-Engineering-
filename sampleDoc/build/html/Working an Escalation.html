@@ -81,19 +81,30 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="intro.html">intro</a></li>
-<li class="toctree-l1"><a class="reference internal" href="strings.html">strings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tools.html">Tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Definitions.html">Definitions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Monitoring Escalations.html">Monitoring Escalations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Escalation Triage Responsabilites.html">Escalation Triage Responsabilites</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Issue Types.html">Issue Types</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Creating Escalations.html">Creating Escalations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ticket LifeCycle.html">Ticket LifeCycle</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Triage.html">Triage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Select an Escalation from the FIFO Q.html">Select an Escalation from the FIFO Q</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Assign yourself an Escalation from the FIFO Q.html">Assign yourself an Escalation from the FIFO Q</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Working an Escalation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Working an Escalation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#while-the-escalations-is-being-worked-by-cpe">While the Escalations is being Worked by CPE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#stingray-information-and-instructions">Stingray Information and Instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#basic-information">Basic Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-access-data-on-stingray-via-nfs-ssh-kb-article">How to Access Data on Stingray via NFS / SSH (KB Article) :</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-access-data-on-stingray-via-cifs-smb">How to Access Data on Stingray via CIFS / SMB:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-access-stingray-via-http">How to Access Stingray via HTTP:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-transfer-files-from-stingray-to-bdr-scratch">How to transfer files from Stingray to BDR-scratch:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#additional-notes">Additional Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#if-the-escalation-has-a-defect-associated-to-it">If the Escalation has a Defect Associated To It</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#if-you-need-more-information">If you Need More Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#if-the-case-needs-cpe-management-assistance">If the Case Needs CPE Management Assistance</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Resolving an Emergency Call-out ticket type.html">Resolving an Emergency Call-out ticket type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Resolving an Escalation (CPE DU |DL |DC, CPE Escalations and CPE Help).html">Resolving an Escalation (CPE DU | DL | DC, CPE Escalations and CPE Help)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Hardware RCA | FA etc.html">Hardware RCA | FA etc</a></li>
@@ -107,6 +118,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Incident Reviews.html">Incident Reviews</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Quality Metrics.html">Quality Metrics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Scratch Usage Policy.html">Scratch Usage Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Acronyms.html">Acronyms</a></li>
 </ul>
 
             
@@ -173,7 +185,280 @@
             
   <div class="section" id="working-an-escalation">
 <h1>Working an Escalation<a class="headerlink" href="#working-an-escalation" title="Permalink to this headline">¶</a></h1>
-<p>Welcome to the Working an Escalation page</p>
+<p><strong>CPE DU/DL/DC, CPE Escalations, and CPE Help</strong></p>
+<div class="section" id="while-the-escalations-is-being-worked-by-cpe">
+<h2>While the Escalations is being Worked by CPE<a class="headerlink" href="#while-the-escalations-is-being-worked-by-cpe" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul>
+<li><p class="first">Keep the escalation/CSD ticket in the “Fix in Progress” staus</p>
+</li>
+<li><p class="first">Provide <strong>DAILY</strong> ticket updates for all tickets you own, regardless of region, where the status is “in progress”, and use the template:</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>What</strong></li>
+<li><strong>What Next</strong></li>
+<li><strong>Who</strong></li>
+<li><strong>When</strong></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Use external comments when entering comments to be shared with developers, support and CPE(any one with a JIRA license will be able to see these comments)</p>
+</li>
+<li><p class="first">Use internal comments when entering internal comments. These comments will only be visible to CPE members.</p>
+</li>
+<li><p class="first"><strong>Update the Outage information in the ‘default’ and ‘outage’ tabs to include important information used to gather quality metrics. This includes:</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="first docutils">
+<dt>(Default tab)</dt>
+<dd><ul class="first last">
+<li>Outage Data</li>
+<li>Outage Duration (only for DU cases)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>(Outage tab)</dt>
+<dd><ul class="first last">
+<li>Volumes impacted (only for DU/DL cases)</li>
+<li>When was the problem introduced</li>
+<li>Preventable</li>
+<li>Recovery</li>
+<li>Qualified (only for DU/DL cases)</li>
+<li>Outage Awareness</li>
+<li>Test Escape Likely Phase</li>
+<li>Regression</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="stingray-information-and-instructions">
+<h2>Stingray Information and Instructions<a class="headerlink" href="#stingray-information-and-instructions" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="basic-information">
+<h2>Basic Information<a class="headerlink" href="#basic-information" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul>
+<li><p class="first">“Stingray” is a large directory where case-related data can be stored.</p>
+</li>
+<li><p class="first">This is where all data ends up that is uploaded using <a class="reference external" href="https://upload.netapp.com">https://upload.netapp.com</a> and <a class="reference external" href="ftp://ftp.netapp.com">ftp://ftp.netapp.com</a></p>
+</li>
+<li><p class="first">Files on Stingray are available via NFS, CIFS/SMB, and HTTP</p>
+</li>
+<li><p class="first">Acess is handeld by NetApp SSO</p>
+</li>
+<li><p class="first">Data on Stingray is organized by SAP case number</p>
+</li>
+<li><p class="first">Once the SAP case is closed for 30 (???) days the data in the related directory is automatically archived.</p>
+</li>
+<li><p class="first">Stingray has a European cousin called “Light”</p>
+<blockquote>
+<div><ul class="simple">
+<li>If the files you are looking for are not on Stingray then try the same instructions as below but use “light” instead of “stingray”</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="how-to-access-data-on-stingray-via-nfs-ssh-kb-article">
+<h2>How to Access Data on Stingray via NFS / SSH (<a class="reference external" href="https://kb.netapp.com/app/answers/answer_view/a_id/1073688/">KB Article</a>) :<a class="headerlink" href="#how-to-access-data-on-stingray-via-nfs-ssh-kb-article" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">SSH to the RTP Cycle Servers:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>ssh &lt;netapp_username&gt;&#64;&lt;stingray_name&gt;</dt>
+<dd><p class="first last">For Example</p>
+</dd>
+<dt>ssh <a class="reference external" href="mailto:dsouzas&#37;&#52;&#48;cyclrtp&#46;corp&#46;netapp&#46;com">dsouzas<span>&#64;</span>cyclrtp<span>&#46;</span>corp<span>&#46;</span>netapp<span>&#46;</span>com</a></dt>
+<dd><p class="first last">Or</p>
+</dd>
+</dl>
+<p>ssh 10.103.161.239</p>
+</div></blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>Login using SSO Credentials</dt>
+<dd><p class="first last">–&gt; Use your shortname, i.e. “rossetto”; not “edward.rossetto”</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Change directory to where “Stingray” is mounted:</dt>
+<dd><p class="first last">cd /x/eng/cs-data/&lt;case-number&gt;</p>
+</dd>
+</dl>
+</li>
+</ol>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>For Example</dt>
+<dd>cd /x/eng/cs-data/2007564510</dd>
+</dl>
+</li>
+</ul>
+<ol class="arabic" start="4">
+<li><p class="first">View, search, and manipulate the files as normal using cat, less, grep, etc. (your ssh’d into a regular ole Linux server).</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li>Home directories are persistent; so scripts, etc. can be copied and left on there for ease of log parsing</li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="how-to-access-data-on-stingray-via-cifs-smb">
+<h2>How to Access Data on Stingray via CIFS / SMB:<a class="headerlink" href="#how-to-access-data-on-stingray-via-cifs-smb" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
+<li><dl class="first docutils">
+<dt>Using a file explorer / browser:</dt>
+<dd>:: \stingray-smb.corp.netapp.com\data\&lt;case-number&gt;</dd>
+</dl>
+</li>
+</ol>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Example</dt>
+<dd>:: \stingray-smb.corp.netapp.com\data\2007564510</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="how-to-access-stingray-via-http">
+<h2>How to Access Stingray via HTTP:<a class="headerlink" href="#how-to-access-stingray-via-http" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Using a web browser, go to:</p>
+<blockquote>
+<div><p><a class="reference external" href="https://stingray.corp.netapp.com">https://stingray.corp.netapp.com</a>/&lt;case-number&gt;</p>
+<ul class="simple">
+<li>For Example</li>
+</ul>
+<p><a class="reference external" href="https://stingray.corp.netapp.com/2007663350">https://stingray.corp.netapp.com/2007663350</a></p>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="how-to-transfer-files-from-stingray-to-bdr-scratch">
+<h2>How to transfer files from Stingray to BDR-scratch:<a class="headerlink" href="#how-to-transfer-files-from-stingray-to-bdr-scratch" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Go to <a class="reference external" href="http://stingray.corp.netapp.com">http://stingray.corp.netapp.com</a>/&lt;case-number&gt; and determine the full HTTP path for the file that you would like to transfer.</p>
+<blockquote>
+<div><ul class="simple">
+<li>Example:</li>
+</ul>
+<p><a class="reference external" href="http://stingray.corp.netapp.com/2007686225/2007686225.supportbundle.alln01-fab3-pib-az2-002.tar.gz">http://stingray.corp.netapp.com/2007686225/2007686225.supportbundle.alln01-fab3-pib-az2-002.tar.gz</a></p>
+</div></blockquote>
+</li>
+<li><p class="first">Log into BDR-scratch</p>
+</li>
+<li><dl class="first docutils">
+<dt>If it has not already been done, create the directory to which you would like to copy the file.</dt>
+<dd><p class="first last">mkdir /scratch/support/JPMC_2007686225</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Use wget to copy the file from Stingray to BDR-scratch</dt>
+<dd><p class="first last">wget &lt;path-to-file-on-stingray&gt; &lt;path-to-directory-on-scratch&gt;</p>
+</dd>
+</dl>
+</li>
+</ol>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Example</dt>
+<dd>wget <a class="reference external" href="http://stingray.corp.netapp.com/2007686225/2007686225.supportbundle.alln01-fab3-pib-az2-002.tar.gz">http://stingray.corp.netapp.com/2007686225/2007686225.supportbundle.alln01-fab3-pib-az2-002.tar.gz</a> /scratch/support/JPMC_2007686225</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="additional-notes">
+<h2>Additional Notes<a class="headerlink" href="#additional-notes" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul>
+<li><p class="first">If files are uploaded and are not properly attatched to a case they will end up in /x/eng/cs-data/NoCallNumber or /x/eng/euro-data/NoCallNumber</p>
+</li>
+<li><p class="first">Core files may end up in /x/eng/cs-cores</p>
+</li>
+<li><p class="first">For additional details see the internal information in KB 1029870: “How to upload a file to NetApp”</p>
+<blockquote>
+<div><p><a class="reference external" href="https://kb.netapp.com/app/answers/answer_view/a_id/1029870">https://kb.netapp.com/app/answers/answer_view/a_id/1029870</a></p>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p>If you get the following error on login to stingray.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">SSOshortname</span><span class="nd">@cyclrtp</span><span class="o">.</span><span class="n">corp</span><span class="o">.</span><span class="n">netapp</span><span class="o">.</span><span class="n">com</span>
+<span class="n">SSOshortname</span><span class="nd">@cyclrtp</span><span class="o">.</span><span class="n">corp</span><span class="o">.</span><span class="n">netapp</span><span class="o">.</span><span class="n">com</span><span class="s1">&#39;s password:</span>
+<span class="n">Last</span> <span class="n">login</span><span class="p">:</span> <span class="n">Thu</span> <span class="n">Feb</span> <span class="mi">28</span> <span class="mi">16</span><span class="p">:</span><span class="mi">07</span><span class="p">:</span><span class="mi">09</span> <span class="mi">2019</span> <span class="kn">from</span> <span class="mf">10.116</span><span class="o">.</span><span class="mf">156.1</span>
+<span class="n">Could</span> <span class="ow">not</span> <span class="n">chdir</span> <span class="n">to</span> <span class="n">home</span> <span class="n">directory</span> <span class="o">/</span><span class="n">u</span><span class="o">/</span><span class="n">SSOshortname</span><span class="p">:</span> <span class="n">No</span> <span class="n">such</span> <span class="n">file</span> <span class="ow">or</span> <span class="n">directory</span>
+</pre></div>
+</div>
+<p>Then open a ticket with <a class="reference external" href="https://netapp.service-now.com">https://netapp.service-now.com</a></p>
+</div>
+<div class="section" id="if-the-escalation-has-a-defect-associated-to-it">
+<h2>If the Escalation has a Defect Associated To It<a class="headerlink" href="#if-the-escalation-has-a-defect-associated-to-it" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>As the owner of the escalation, you own the defect until it gets discussed and approved in the corresponding bugcourt.</li>
+<li>If this is a new defect, create a defect in the corresponding backlog (the one for the engineering team responsible to analyze the request), and link the escalation case to it using the ‘Product Defect Case’ field in the corresponding ‘Edit’ screen.</li>
+<li>If this is an exisiting defect, link the escalation to it using the ‘Product Defect Case’ field in the corresponding ‘Edit’ screen.</li>
+<li><strong>Put the image from confluence in here!!!!</strong></li>
+<li>The JIRA escalations are linked to defects using the ‘linked issues’ field AND the ‘Product Defect number’ field. Ideally we would only use the ‘linked issues’ field but unfortunately this doesn’t allow to link to Fogbugz or other bug tracking tools different than JIRA.</li>
+<li><dl class="first docutils">
+<dt>As the owner of the escalation, keep the escalation open until</dt>
+<dd><ul class="first last">
+<li>The change has been committed to a branch,</li>
+<li>It’s been communicated to Support, and Support agrees to close the escalation.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>The escalation will remain open in the status ‘Fix in Progress’ until the fix is committed to a branch (this is part of the bug workflow that Lisa owns, so we can ask her for more details).</li>
+<li>Once the code changes have been committed to a branch, the escalation issue shall be transitioned to ‘Waiting for Release’ until the changes are released.</li>
+<li>Once the release with code changes have been made available to Support, the escalation issue can be closed.</li>
+<li>If the escalation needs a hotfix or an IDR (Interim Diagnostic Relief), follow <a class="reference external" href="https://confluence.ngage.netapp.com/display/HIG/Hotfix+%28patch%29+Release+Process">hotfix</a> process to enter a hotfix ticket and link the escalation case to it.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="if-you-need-more-information">
+<h2>If you Need More Information<a class="headerlink" href="#if-you-need-more-information" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>If you need more information or to report a status back to support:</dt>
+<dd><ul class="first last simple">
+<li>Change the status of the escalation to “Need More Information”</li>
+<li>Enter an external comment and address it to the person from whom the information is requested (normally the Support Owner).</li>
+<li>Don’t change the assignee in the CSD Case (CPE will always own the escalation).</li>
+<li>Once the data is recieved and work can resume, change the status back to “Fix in Progress”.</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="if-the-case-needs-cpe-management-assistance">
+<h2>If the Case Needs CPE Management Assistance<a class="headerlink" href="#if-the-case-needs-cpe-management-assistance" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>If the request needs assistance from an escalation or CPE manager, change the status to “Escalation Management”.</li>
+<li>Assign the case to an escalation or CPE Manager.</li>
+<li>Communicate back to Support that the case is being owned by an escalation or CPE manager.</li>
+</ul>
+</div></blockquote>
+</div>
 </div>
 
 

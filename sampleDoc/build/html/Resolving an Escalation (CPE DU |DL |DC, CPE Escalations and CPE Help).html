@@ -34,9 +34,7 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Hardware RCA | FA etc" href="Hardware RCA | FA etc.html" />
-    <link rel="prev" title="Resolving an Emergency Call-out ticket type" href="Resolving an Emergency Call-out ticket type.html" /> 
+    <link rel="search" title="Search" href="search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -80,22 +78,19 @@
               
             
             
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="intro.html">intro</a></li>
-<li class="toctree-l1"><a class="reference internal" href="strings.html">strings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Overview.html">Overview</a></li>
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="Tools.html">Tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Definitions.html">Definitions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Monitoring Escalations.html">Monitoring Escalations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Escalation Triage Responsabilites.html">Escalation Triage Responsabilites</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Issue Types.html">Issue Types</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Creating Escalations.html">Creating Escalations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ticket LifeCycle.html">Ticket LifeCycle</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Triage.html">Triage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Select an Escalation from the FIFO Q.html">Select an Escalation from the FIFO Q</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Assign yourself an Escalation from the FIFO Q.html">Assign yourself an Escalation from the FIFO Q</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Working an Escalation.html">Working an Escalation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Resolving an Emergency Call-out ticket type.html">Resolving an Emergency Call-out ticket type</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Resolving an Escalation (CPE DU | DL | DC, CPE Escalations and CPE Help)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Hardware RCA | FA etc.html">Hardware RCA | FA etc</a></li>
 <li class="toctree-l1"><a class="reference internal" href="BugCourt.html">BugCourt</a></li>
 <li class="toctree-l1"><a class="reference internal" href="On-Call.html">On-Call</a></li>
@@ -107,6 +102,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Incident Reviews.html">Incident Reviews</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Quality Metrics.html">Quality Metrics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Scratch Usage Policy.html">Scratch Usage Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Acronyms.html">Acronyms</a></li>
 </ul>
 
             
@@ -158,7 +154,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/Resolving an Escalation (CPE DU |DL |DC, CPE Escalations and CPE Help).rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/Resolving an Escalation (CPE DU |DL |DC, CPE Escalations and CPE HELP).rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -173,7 +169,42 @@
             
   <div class="section" id="resolving-an-escalation-cpe-du-dl-dc-cpe-escalations-and-cpe-help">
 <h1>Resolving an Escalation (CPE DU | DL | DC, CPE Escalations and CPE Help)<a class="headerlink" href="#resolving-an-escalation-cpe-du-dl-dc-cpe-escalations-and-cpe-help" title="Permalink to this headline">¶</a></h1>
-<p>Welcome to Resolving an Escalation</p>
+<div class="section" id="if-cpe-is-done-with-the-escalation">
+<h2>If CPE is Done with the Escalation<a class="headerlink" href="#if-cpe-is-done-with-the-escalation" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>Change the status of the escalation to “Resolved”: An escalation can be resolved when Support confirms that the CPE work is done for this escalation. When resolving the escalation a new screen will pop up.</li>
+<li><dl class="first docutils">
+<dt>Populate the resolution code:</dt>
+<dd><ul class="first last">
+<li>Code Changes: Resolving the case involved code changes (and normally a new defect). If the escalation was tied to a defect but the defect was available and no new code changes were needed, the resolution code should be “No Code Changes”. Product documentation changes can be included in this category.</li>
+<li>No Code Changes: Resolving the cases didn’t involve code changes.</li>
+<li>Declined: The escalation was declined for whatever reason.</li>
+<li>Done: This category is for those casese that don’t correspond to “Code Changes” or “No Code Changes”. An escalation manager should revisit these cases to understand if new categories/resolution codes should be added to the list.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>Populate the time spent in the resolution of the issue (obvioulsy, this is an estimate).</li>
+<li>Enter comments if necessary.</li>
+<li>Communicate to Support that the escalation is being resolved.</li>
+</ul>
+</div></blockquote>
+<img alt="_images/resolvedScreen.png" src="_images/resolvedScreen.png" />
+</div>
+<div class="section" id="if-the-escalation-needs-to-be-reopened">
+<h2>If the Escalation Needs to Be Reopened:<a class="headerlink" href="#if-the-escalation-needs-to-be-reopened" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>Change the status to “Reopen”.</li>
+<li>Work the case as if it’s in the status “Fix in Progress”. Use the “Reopen” status so we can obtain reports on how many escalations needed to be reopened. Eventually change the status to “Need More Information”, “On Hold”, or “Escalation Management” if necessary.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="what-to-do-with-solved-du-dl-dc-tickets">
+<h2>What to Do with Solved DU/DL/DC Tickets<a class="headerlink" href="#what-to-do-with-solved-du-dl-dc-tickets" title="Permalink to this headline">¶</a></h2>
+<p>These tickets aren’t addressed to CPE but reported to gather quality metrics regarding the number of DU/DL/DC cases that impact customers. The process to handle these tickets needs to be defined/discussed.</p>
+</div>
 </div>
 
 
@@ -181,15 +212,6 @@
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="Hardware RCA | FA etc.html" class="btn btn-neutral float-right" title="Hardware RCA | FA etc" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="Resolving an Emergency Call-out ticket type.html" class="btn btn-neutral float-left" title="Resolving an Emergency Call-out ticket type" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>

@@ -81,15 +81,13 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="intro.html">intro</a></li>
-<li class="toctree-l1"><a class="reference internal" href="strings.html">strings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tools.html">Tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Definitions.html">Definitions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Monitoring Escalations.html">Monitoring Escalations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Escalation Triage Responsabilites.html">Escalation Triage Responsabilites</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Issue Types.html">Issue Types</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Creating Escalations.html">Creating Escalations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ticket LifeCycle.html">Ticket LifeCycle</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Triage.html">Triage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Select an Escalation from the FIFO Q.html">Select an Escalation from the FIFO Q</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Assign yourself an Escalation from the FIFO Q.html">Assign yourself an Escalation from the FIFO Q</a></li>
@@ -102,11 +100,17 @@
 <li class="toctree-l1"><a class="reference internal" href="Escalating Development.html">Escalating Development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Escalation Manager.html">Escalation Manager</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Creating a Case for Escalation Managers (CPE Esc Mgmt).html">Creating a Case for Escalation Managers (CPE Esc Mgmt)</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Working D-patches (aka Hotfixes)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Working D-patches (aka Hotfixes)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#definition-of-a-d-patch">Definition of a D-patch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-a-d-patch-request">Creating a D-Patch Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#test-plan-story-acceptance-criteria">Test Plan Story Acceptance Criteria</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Sustaining Engineering Support Targetted Commitments.html">Sustaining Engineering Support Targetted Commitments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Incident Reviews.html">Incident Reviews</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Quality Metrics.html">Quality Metrics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Scratch Usage Policy.html">Scratch Usage Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Acronyms.html">Acronyms</a></li>
 </ul>
 
             
@@ -173,7 +177,68 @@
             
   <div class="section" id="working-d-patches-aka-hotfixes">
 <h1>Working D-patches (aka Hotfixes)<a class="headerlink" href="#working-d-patches-aka-hotfixes" title="Permalink to this headline">¶</a></h1>
-<p>Welcome to Working D-patches</p>
+<div class="section" id="definition-of-a-d-patch">
+<h2>Definition of a D-patch<a class="headerlink" href="#definition-of-a-d-patch" title="Permalink to this headline">¶</a></h2>
+<p>A D-patch is defined as any change to a customers cluster this includes new binaries, changes, additions to configurations. It also includes constant changes, diagnostic changes, etc. The Sustaining Engineer in conjunction with the support engineer can request a D-patch. Typically these are per customer per issue but in some more systemic conditions can be made available to all customers.</p>
+</div>
+<div class="section" id="creating-a-d-patch-request">
+<h2>Creating a D-Patch Request<a class="headerlink" href="#creating-a-d-patch-request" title="Permalink to this headline">¶</a></h2>
+<p>D-patches are worked in the Sustaining project (SUST). To request a d-patch, create an Epic under the project describing the ask for the d-patch. This Epic will then be put on the backlog for prioritization.</p>
+<p>Ensure the following items are filled in.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Fix Version/s - Set this to D-Patch</li>
+<li>Linked Issues - Set this to the defect that the D-Patch is resolving. Use the “is caused by” Linked Issues selection.</li>
+</ol>
+</div></blockquote>
+<p>Once the Epic is prioritized or it is determined that the work will be done, at a minimum two stories will be created.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Story for the development work for the d-patch. If this work is extensive please break it down into multiple stories.</li>
+<li>Story for the Test Plan.</li>
+</ol>
+</div></blockquote>
+<p>Set the acceptance criteria to a minimum of:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">D-Patch code is complete and patches the system accordingly.</p>
+</li>
+<li><p class="first">D-Patch manifest is properly documented and reviewed.</p>
+</li>
+<li><p class="first">D-Patch testing is complete and all defects found in testing are either resolved or mitigated via documentation in the manifest.</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li>Set Component to DPatch-Test</li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="test-plan-story-acceptance-criteria">
+<h2>Test Plan Story Acceptance Criteria<a class="headerlink" href="#test-plan-story-acceptance-criteria" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul>
+<li><p class="first">Test Plan</p>
+<blockquote>
+<div><ul>
+<li><p class="first">Plan will be done under the Test Story that is created with Epic.</p>
+<blockquote>
+<div><ul class="simple">
+<li>If additional stories are needed then create them as stories under the DPatch Epic.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Test Plan document is approved by Developer and Test Lead</p>
+</li>
+<li><p class="first">Story or Stories for the the test development and execution</p>
+</li>
+</ul>
+</div></blockquote>
+</div>
 </div>
 
 

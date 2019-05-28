@@ -81,15 +81,13 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="intro.html">intro</a></li>
-<li class="toctree-l1"><a class="reference internal" href="strings.html">strings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tools.html">Tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Definitions.html">Definitions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Monitoring Escalations.html">Monitoring Escalations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Escalation Triage Responsabilites.html">Escalation Triage Responsabilites</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Issue Types.html">Issue Types</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Creating Escalations.html">Creating Escalations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ticket LifeCycle.html">Ticket LifeCycle</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Triage.html">Triage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Select an Escalation from the FIFO Q.html">Select an Escalation from the FIFO Q</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Assign yourself an Escalation from the FIFO Q.html">Assign yourself an Escalation from the FIFO Q</a></li>
@@ -103,10 +101,16 @@
 <li class="toctree-l1"><a class="reference internal" href="Escalation Manager.html">Escalation Manager</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Creating a Case for Escalation Managers (CPE Esc Mgmt).html">Creating a Case for Escalation Managers (CPE Esc Mgmt)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Working D-patches (aka Hotfixes).html">Working D-patches (aka Hotfixes)</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Sustaining Engineering Support Targetted Commitments</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sustaining Engineering Support Targetted Commitments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#escalation-triage">Escalation Triage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sustaining-escalations-waiting-to-be-assigned">Sustaining Escalations Waiting to be Assigned</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#escalation-updates">Escalation Updates</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Incident Reviews.html">Incident Reviews</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Quality Metrics.html">Quality Metrics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Scratch Usage Policy.html">Scratch Usage Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Acronyms.html">Acronyms</a></li>
 </ul>
 
             
@@ -173,7 +177,81 @@
             
   <div class="section" id="sustaining-engineering-support-targetted-commitments">
 <h1>Sustaining Engineering Support Targetted Commitments<a class="headerlink" href="#sustaining-engineering-support-targetted-commitments" title="Permalink to this headline">¶</a></h1>
-<p>Welcome to Sustaining Engineering</p>
+<div class="section" id="escalation-triage">
+<h2>Escalation Triage<a class="headerlink" href="#escalation-triage" title="Permalink to this headline">¶</a></h2>
+<p>All escalations except active DU/DL’s (these are handled close to real time) enter an “Awaiting Triage” state. We are targetted to triage all escalations within 2 hours of filling between the hours of 0630MT and 1800MT. During Triage, the escalation will be assessed for completeness and updated if the problem description is not complete, logs are missing, etc. If the escalation is complete, the escalation will be moved to Sustaining Escalations Waiting to be Assigned. The triage engineer will also adjust the priority of the escalation which by default is not set based on:</p>
+<table border="1" class="colwidths-given docutils" id="id1">
+<caption><span class="caption-text"><strong>Escalation Priority</strong></span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">State</th>
+<th class="head">Priority</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>A DU/DL/DC is Pending in a short time frame (mins to hours)</td>
+<td>P1</td>
+</tr>
+<tr class="row-odd"><td>Will occur often / business sensitivity to the esclation or account / Emails from support managers etc, asking from a shift in the speed of pickup</td>
+<td>P2</td>
+</tr>
+<tr class="row-even"><td>Some other condition that may require a shift</td>
+<td>P3</td>
+</tr>
+<tr class="row-odd"><td>Default State</td>
+<td>NULL</td>
+</tr>
+</tbody>
+</table>
+<p>This priority setting will adjust the In Queue view and prioritise the escalations with priority over the FIFO queue.</p>
+</div>
+<div class="section" id="sustaining-escalations-waiting-to-be-assigned">
+<h2>Sustaining Escalations Waiting to be Assigned<a class="headerlink" href="#sustaining-escalations-waiting-to-be-assigned" title="Permalink to this headline">¶</a></h2>
+<p>This is the incoming queue for NetApp HCL Sustaining Engineering. Cases are adressed in this priority unless there is a management override:</p>
+<blockquote>
+<div><ul>
+<li><p class="first">Active DU/DL Escalations</p>
+<blockquote>
+<div><ul class="simple">
+<li>Withing 30 minutes per the on-call process for NetApp HCL Sustaining Engineering the escalation will be assigned and worked.</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">DU/DL Escalations (Equivalent to P1/P2 in SAP)</p>
+<blockquote>
+<div><ul class="simple">
+<li>Assigned First in First Out until no more DU/DL Escalations are awaiting assignment</li>
+<li>We look to assignee these to sustaining within 3 days of filing</li>
+<li>Sustaining will try to provide a Software-based RCA within a 2 week timeframe form the time of filing</li>
+<li>For Hardware related issues, the NetApp FA process can take months. We Will try and provide a Failure Analysis for Hardware within 3 months starting time of delivery to Jabil.</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Escalations</p>
+<blockquote>
+<div><ul class="simple">
+<li>Assigned First in First Out after all DU/DL Escalations are cleared</li>
+<li>We look to assign these within one week of filing</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="escalation-updates">
+<h2>Escalation Updates<a class="headerlink" href="#escalation-updates" title="Permalink to this headline">¶</a></h2>
+<p>Here are the three targets Sustaining has agreed with Support for owning tickets and for providing regular updates in escalation tickets:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Sustaining engineers are expected to have a queue depth of no more than <strong>seven</strong> escalations of which only <strong>two</strong> should be <strong>“Fix In Progress”</strong>.</li>
+<li>All escalations with a status <strong>“Fix In Progress”</strong> will be updated <strong>daily</strong> through case comments the “Escalation Next Steps” field.</li>
+<li>All escalations with a status <strong>“Need More Information”</strong> will be updated <strong>weekly</strong> through case comments the “Escalation Next Steps” field.</li>
+</ul>
+</div></blockquote>
+</div>
 </div>
 
 
