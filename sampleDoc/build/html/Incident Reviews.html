@@ -81,21 +81,18 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="intro.html">intro</a></li>
-<li class="toctree-l1"><a class="reference internal" href="strings.html">strings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tools.html">Tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Definitions.html">Definitions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Monitoring Escalations.html">Monitoring Escalations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Escalation Triage Responsabilites.html">Escalation Triage Responsabilites</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Issue Types.html">Issue Types</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Creating Escalations.html">Creating Escalations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ticket LifeCycle.html">Ticket LifeCycle</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Triage.html">Triage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Select an Escalation from the FIFO Q.html">Select an Escalation from the FIFO Q</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Assign yourself an Escalation from the FIFO Q.html">Assign yourself an Escalation from the FIFO Q</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Working an Escalation.html">Working an Escalation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Resolving an Emergency Call-out ticket type.html">Resolving an Emergency Call-out ticket type</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Resolving an Escalation (CPE DU |DL |DC, CPE Escalations and CPE Help).html">Resolving an Escalation (CPE DU | DL | DC, CPE Escalations and CPE Help)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Hardware RCA | FA etc.html">Hardware RCA | FA etc</a></li>
 <li class="toctree-l1"><a class="reference internal" href="BugCourt.html">BugCourt</a></li>
 <li class="toctree-l1"><a class="reference internal" href="On-Call.html">On-Call</a></li>
@@ -104,9 +101,17 @@
 <li class="toctree-l1"><a class="reference internal" href="Creating a Case for Escalation Managers (CPE Esc Mgmt).html">Creating a Case for Escalation Managers (CPE Esc Mgmt)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Working D-patches (aka Hotfixes).html">Working D-patches (aka Hotfixes)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sustaining Engineering Support Targetted Commitments.html">Sustaining Engineering Support Targetted Commitments</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Incident Reviews</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Incident Reviews</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#when-to-have-an-incident-review">When to Have an Incident Review</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-request-an-incident-review">How to Request an Incident Review</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#incident-review-action-items">Incident Review Action Items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#incident-review-meeting-notes">Incident Review Meeting Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#incident-review-dashboard-metrics">Incident Review Dashboard / Metrics</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Quality Metrics.html">Quality Metrics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Scratch Usage Policy.html">Scratch Usage Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Acronyms.html">Acronyms</a></li>
 </ul>
 
             
@@ -173,7 +178,54 @@
             
   <div class="section" id="incident-reviews">
 <h1>Incident Reviews<a class="headerlink" href="#incident-reviews" title="Permalink to this headline">¶</a></h1>
-<p>Welcome to Incident Reviews</p>
+<div class="section" id="when-to-have-an-incident-review">
+<h2>When to Have an Incident Review<a class="headerlink" href="#when-to-have-an-incident-review" title="Permalink to this headline">¶</a></h2>
+<p>Incident reviews are technical discussions that happen on request and that involve representation from Support, Engineering (dev and test), CPE and Quality teams. During these meetings a summary of the case as well as the root cause are described and discussed. This information can be used by Support to be included in the final report to the customer.</p>
+<p>Incident reviews will be done for the following incidents:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Every DL</li>
+<li>Every other AFA incident for which an incident has been requested (on-demand)</li>
+<li>Every incident related to HCL (i.e. Dev Vertical is set to HCL)</li>
+</ul>
+</div></blockquote>
+<p>The query (“PQR - Need Incident Review”) returns all the incidents that are due for an incident review.</p>
+<p>The query (“PQR - Scheduled Incident Reviews”) returns all incidents for which we have scheduled an incident review.</p>
+<p>The query (“PQR - Reviewed Incident Reviews”) returns all the incidents for which we had an incident review.</p>
+</div>
+<div class="section" id="how-to-request-an-incident-review">
+<h2>How to Request an Incident Review<a class="headerlink" href="#how-to-request-an-incident-review" title="Permalink to this headline">¶</a></h2>
+<p>In order to request an incident review the “Incident Review” field needs to be checked when creating or editing the case:</p>
+<img alt="incident1.png" src="incident1.png" />
+<p>The CPE/Incident Review Program Manager (or any other person designated for this) will be in charge to review the request, that a root cause has been identified, and to confirm that the team is ready for the discussion, and will also schedule the review. These items will exist in the “IR meeting to be scheduled” swim lane. When scheduling the review the “review data” field will be set. If the date is set, the items will be included in the “IR meeting schedule swim lane”.</p>
+</div>
+<div class="section" id="incident-review-action-items">
+<h2>Incident Review Action Items<a class="headerlink" href="#incident-review-action-items" title="Permalink to this headline">¶</a></h2>
+<p>Action items from the incident reviews will be created as sub-tasks (of the type action item) attatched to the CSD escalation that corresponds to the incident review:</p>
+<img alt="incident2.png" src="incident2.png" />
+</div>
+<div class="section" id="incident-review-meeting-notes">
+<h2>Incident Review Meeting Notes<a class="headerlink" href="#incident-review-meeting-notes" title="Permalink to this headline">¶</a></h2>
+<p>All notes from the Incident Reviews exist in Confluence. When a new incident review is scheduled, create a new incident review page using the ‘Incident Review 2018’ template. The page ‘Incident Review 2018’ includes a button (‘Create Incident Review’) that automatically creates a new page for the incident review using the mentioned template, as well as a table of contents with all the incident review pages:</p>
+<p><a class="reference external" href="https://confluence.ngage.netapp.com/display/IRE/Incident+Review+2018">Incident Review 2018</a></p>
+<img alt="incident3.png" src="incident3.png" />
+</div>
+<div class="section" id="incident-review-dashboard-metrics">
+<h2>Incident Review Dashboard / Metrics<a class="headerlink" href="#incident-review-dashboard-metrics" title="Permalink to this headline">¶</a></h2>
+<p>The board contians information about:</p>
+<blockquote>
+<div><ul class="simple">
+<li>List of pending incident reviews</li>
+<li>List of scheduled incident reviews</li>
+<li>List of completed incident reviews</li>
+<li>Pie chart with action items per category</li>
+<li>Pie chart with action items per status per category</li>
+<li>Pie chart with total number of incident reviews per status (pending, scheduled, done)</li>
+<li>Pie chart with defects opened</li>
+</ul>
+</div></blockquote>
+<p><a class="reference external" href="https://ngage.netapp.com/secure/Dashboard.jspa">https://ngage.netapp.com/secure/Dashboard.jspa</a>?selectPageId=19723#</p>
+</div>
 </div>
 
 

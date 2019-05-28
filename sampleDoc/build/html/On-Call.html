@@ -81,24 +81,26 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="intro.html">intro</a></li>
-<li class="toctree-l1"><a class="reference internal" href="strings.html">strings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tools.html">Tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Definitions.html">Definitions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Monitoring Escalations.html">Monitoring Escalations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Escalation Triage Responsabilites.html">Escalation Triage Responsabilites</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Issue Types.html">Issue Types</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Creating Escalations.html">Creating Escalations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ticket LifeCycle.html">Ticket LifeCycle</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Triage.html">Triage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Select an Escalation from the FIFO Q.html">Select an Escalation from the FIFO Q</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Assign yourself an Escalation from the FIFO Q.html">Assign yourself an Escalation from the FIFO Q</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Working an Escalation.html">Working an Escalation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Resolving an Emergency Call-out ticket type.html">Resolving an Emergency Call-out ticket type</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Resolving an Escalation (CPE DU |DL |DC, CPE Escalations and CPE Help).html">Resolving an Escalation (CPE DU | DL | DC, CPE Escalations and CPE Help)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Hardware RCA | FA etc.html">Hardware RCA | FA etc</a></li>
 <li class="toctree-l1"><a class="reference internal" href="BugCourt.html">BugCourt</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">On-Call</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">On-Call</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#export-on-call-calenders-to-from-victorops-and-import-to-outlook-or-google">Export on-call calenders to from VictorOps and import to Outlook or Google</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#enter-personal-paging-policy">Enter Personal Paging Policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#if-you-are-on-call">If you Are on Call</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Escalating Development.html">Escalating Development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Escalation Manager.html">Escalation Manager</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Creating a Case for Escalation Managers (CPE Esc Mgmt).html">Creating a Case for Escalation Managers (CPE Esc Mgmt)</a></li>
@@ -107,6 +109,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Incident Reviews.html">Incident Reviews</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Quality Metrics.html">Quality Metrics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Scratch Usage Policy.html">Scratch Usage Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Acronyms.html">Acronyms</a></li>
 </ul>
 
             
@@ -173,7 +176,39 @@
             
   <div class="section" id="on-call">
 <h1>On-Call<a class="headerlink" href="#on-call" title="Permalink to this headline">¶</a></h1>
-<p>Welcome to On-Call</p>
+<p>CPE uses VictorOps as the tool to manage team rotations and personal paging policies. To access VictorOps, use this link:</p>
+<p><a class="reference external" href="https://portal.victorops.com/client/solidfire">https://portal.victorops.com/client/solidfire</a></p>
+<p>When a “CPE DU/DL/DC” ticket is created in JIRA, if the “call-out” checkbox is checked, VictorOps will trigger the escalation policy defined for the cpe_on_fire team.</p>
+<p>..image:: onCall1.png</p>
+<p>This includes contacting the primary on-call person for the CPE team, the on-call manager and sending an email to the whole team. If the alert is not acknowledged within 10 minutes, then the secondary on-call person will be contacted. If the alert isn’t acknowledged within 10 minutes after reaching out to the secondary on-call person, then the on-call escalation manager will be contacted (again). The following picture shows the team policy as entered in VictorOps:</p>
+<img alt="_images/onCall2.png" src="_images/onCall2.png" />
+<div class="section" id="export-on-call-calenders-to-from-victorops-and-import-to-outlook-or-google">
+<h2>Export on-call calenders to from VictorOps and import to Outlook or Google<a class="headerlink" href="#export-on-call-calenders-to-from-victorops-and-import-to-outlook-or-google" title="Permalink to this headline">¶</a></h2>
+<p>There are two on-call calenders in VictorOps; one for Engineer on-call (cpe-on-fire) and one for Manager on-call (cpe-esc-mgmt). You need to add both calendars to Outlook or Google.</p>
+<p>To export a calendar from VictorOps, click the link below and save the ‘.ics’ file.</p>
+<p><strong>cpe-on-fire</strong>:  <a class="reference external" href="https://portal.victorops.com/api/v1/org/solidfire/team/cpe_on_fire/calendar/C6DB2F688AAB498D9E812EADAF3C5924.ics">https://portal.victorops.com/api/v1/org/solidfire/team/cpe_on_fire/calendar/C6DB2F688AAB498D9E812EADAF3C5924.ics</a></p>
+<p><strong>cpe-esc-mgmt</strong>: <a class="reference external" href="https://portal.victorops.com/api/v1/org/solidfire/team/cpe_esc_mgmt/calendar/8C6A4B0F1D741F8F795BBCE855F030C3.ics">https://portal.victorops.com/api/v1/org/solidfire/team/cpe_esc_mgmt/calendar/8C6A4B0F1D741F8F795BBCE855F030C3.ics</a></p>
+<p>To import the calendar to Google or Outlook, add a calendar from file and select the appropriate ‘.ics’ file.</p>
+<p>(<a class="reference external" href="https://help.victorops.com/knowledge-base/calendar-export/">VictorOps help exporting a calendar</a>)</p>
+</div>
+<div class="section" id="enter-personal-paging-policy">
+<h2>Enter Personal Paging Policy<a class="headerlink" href="#enter-personal-paging-policy" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>If you’re part of the rotation team you should enter your contact information and your paging policy which describes how VictorOps should contact you if needed. You can do this in: VictorOps -&gt; Settings -&gt; Users -&gt; <strong>Edit your user</strong> .</li>
+</ul>
+</div></blockquote>
+<img alt="_images/onCall3.png" src="_images/onCall3.png" />
+</div>
+<div class="section" id="if-you-are-on-call">
+<h2>If you Are on Call<a class="headerlink" href="#if-you-are-on-call" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>If you’re part of the rotation policy you’ll be on-call eventually. To find out when you’ll be on-call you can check the VictorOps team calendar, which can be found in VictorOps -&gt; Settings -&gt; Teams -&gt; <strong>Select team cpe_on_fire</strong>.</li>
+<li>You can also copy the Team Calendar and add it to your Outlook or Google Calendars, e.g.</li>
+</ul>
+</div></blockquote>
+</div>
 </div>
 
 
