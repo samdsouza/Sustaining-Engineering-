@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Escalating Development &mdash; samply 0.0.1 documentation</title>
+  <title>Escalating to Development &mdash; samply 0.0.1 documentation</title>
   
 
   
@@ -34,9 +34,7 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Escalation Manager" href="Escalation Manager.html" />
-    <link rel="prev" title="On-Call" href="On-Call.html" /> 
+    <link rel="search" title="Search" href="search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -80,26 +78,23 @@
               
             
             
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="intro.html">intro</a></li>
-<li class="toctree-l1"><a class="reference internal" href="strings.html">strings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Overview.html">Overview</a></li>
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="Tools.html">Tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Definitions.html">Definitions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Monitoring Escalations.html">Monitoring Escalations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Escalation Triage Responsabilites.html">Escalation Triage Responsabilites</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Issue Types.html">Issue Types</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Creating Escalations.html">Creating Escalations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ticket LifeCycle.html">Ticket LifeCycle</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Triage.html">Triage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Select an Escalation from the FIFO Q.html">Select an Escalation from the FIFO Q</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Assign yourself an Escalation from the FIFO Q.html">Assign yourself an Escalation from the FIFO Q</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Working an Escalation.html">Working an Escalation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Resolving an Emergency Call-out ticket type.html">Resolving an Emergency Call-out ticket type</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Resolving an Escalation (CPE DU |DL |DC, CPE Escalations and CPE Help).html">Resolving an Escalation (CPE DU | DL | DC, CPE Escalations and CPE Help)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Hardware RCA | FA etc.html">Hardware RCA | FA etc</a></li>
 <li class="toctree-l1"><a class="reference internal" href="BugCourt.html">BugCourt</a></li>
 <li class="toctree-l1"><a class="reference internal" href="On-Call.html">On-Call</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Escalating Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Escalating to Development.html">Escalating to Development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Escalation Manager.html">Escalation Manager</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Creating a Case for Escalation Managers (CPE Esc Mgmt).html">Creating a Case for Escalation Managers (CPE Esc Mgmt)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Working D-patches (aka Hotfixes).html">Working D-patches (aka Hotfixes)</a></li>
@@ -107,6 +102,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Incident Reviews.html">Incident Reviews</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Quality Metrics.html">Quality Metrics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Scratch Usage Policy.html">Scratch Usage Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Acronyms.html">Acronyms</a></li>
 </ul>
 
             
@@ -152,7 +148,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Escalating Development</li>
+      <li>Escalating to Development</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -171,9 +167,50 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="escalating-development">
-<h1>Escalating Development<a class="headerlink" href="#escalating-development" title="Permalink to this headline">¶</a></h1>
-<p>Welcome to Esclating Development</p>
+  <div class="section" id="escalating-to-development">
+<h1>Escalating to Development<a class="headerlink" href="#escalating-to-development" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>Regardless of the time of day, if you need to get other engineers or developers involved, use this spreadsheet to determine who is on call: <a class="reference external" href="https://docs.google.com/spreadsheets/d/11KVhEIXoFLx_k9Xq7uz10uXoAxS61f_ZoakOBH44DBc/edit#gid=778471159">https://docs.google.com/spreadsheets/d/11KVhEIXoFLx_k9Xq7uz10uXoAxS61f_ZoakOBH44DBc/edit#gid=778471159</a></li>
+</ul>
+<p>The developer on-call who responds will, if needed, pull in the “2nd level” expert to assist. DO NOT reach out to the 2nd level yourself. Always reach out to the name at the top of the list regardless of the time of day.</p>
+<img alt="_images/newOps.png" src="_images/newOps.png" />
+<ul class="simple">
+<li>Notice that there are different tabs for different teams, and that each team may have two categories, one for ‘veteren’ and one for ‘new’. E.g., ‘Core Team-Veteran’ and ‘Core Team-New’.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For PLATFORM, call directly using the numbers in the ‘Platform’ tab. For other than platform, use VictorOps (see below).</p>
+</div>
+<ul class="simple">
+<li>When escalating to development, create a manual incident using VictorOps. If for the team to which you’re escalating the issue there are veteran and new sub-teams, create two incidents, one for ‘veteran’ and one for ‘new’.</li>
+<li>To create an incident manually in VictorOps, follow these steps:</li>
+</ul>
+<img alt="_images/ops3.png" src="_images/ops3.png" />
+<ul class="simple">
+<li>Log in to VictorOps</li>
+<li>In the ‘Timeline’ section, make sure that the sub-section ‘Incidents’ is selected</li>
+<li>In the ‘Incident’ section, click the green button ‘Create Incident’</li>
+<li>Click on the ‘Send To’ box and select the users from the ‘Users’ tab:</li>
+</ul>
+<img alt="_images/ops4.png" src="_images/ops4.png" />
+<ul class="simple">
+<li>start typing the name of the on-call developer and select it</li>
+</ul>
+<img alt="_images/ops5.png" src="_images/ops5.png" />
+<ul class="simple">
+<li>Populate ‘Incident Description’ following this format: ‘Need immediate help with CSD-123- Call John at 555-123-4567’, where John is ‘you’, CSD-123 is the JIRA ticket number and ‘555-123-4567’ is your phone number.</li>
+<li>If there is information about a meeting conference where the case is being discussed (e.g. webex, hipchat, gotomeeting) populate this information in the ‘Incident Body’ section.</li>
+<li>When the incident is created, you should see a ‘success’ message and activity in the timeline related to this new incident:</li>
+</ul>
+<img alt="_images/ops6.png" src="_images/ops6.png" />
+<ul class="simple">
+<li>When creating two incidents (one for veteran and one for new), use the same description and body</li>
+<li>Create one manual incident and address it to a veteran (from the veteran tab)</li>
+<li>Create one manual incident and address it to the <a class="reference external" href="https://portal.victorops.com/auth-link?resume=/sp/k5bUm/resume/sp/ACS.ping&amp;idpentity=http://sts.netapp.com/adfs/services/trust">cpe_dev_element_newbie</a> team in VictorOps.</li>
+<li>If the veteran doesn’t respond <strong>within 10 minutes</strong>, use the process to call the next person on the list</li>
+<li>For new people we don’t need to continue sending incidents. Chances are that at least one of the three people to whom the incident was addressed is going to acknowledge the alert and join the call</li>
+<li>If no one has responded and you run out of people to call, contact the on-call CPE manager.</li>
+</ul>
 </div>
 
 
@@ -181,15 +218,6 @@
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="Escalation Manager.html" class="btn btn-neutral float-right" title="Escalation Manager" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="On-Call.html" class="btn btn-neutral float-left" title="On-Call" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>

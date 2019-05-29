@@ -1,6 +1,6 @@
 
 Current Product Engineering (CPE) Handbook (After May 23, 2019) 
-==================================
+================================================================
 
 When selecting an escalation ticket to assign to yourself from the FIFO Q, do the following: 
 
@@ -31,7 +31,7 @@ Table of Contents
    Hardware RCA | FA etc 
    BugCourt
    On-Call
-   Escalating Development 
+   Escalating to Development 
    Escalation Manager 
    Creating a Case for Escalation Managers (CPE Esc Mgmt)
    Working D-patches (aka Hotfixes)

@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Escalating Development" href="Escalating Development.html" />
+    <link rel="next" title="Escalating to Development" href="Escalating to Development.html" />
     <link rel="prev" title="BugCourt" href="BugCourt.html" /> 
 </head>
 
@@ -99,9 +99,11 @@
 <li class="toctree-l2"><a class="reference internal" href="#export-on-call-calenders-to-from-victorops-and-import-to-outlook-or-google">Export on-call calenders to from VictorOps and import to Outlook or Google</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#enter-personal-paging-policy">Enter Personal Paging Policy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#if-you-are-on-call">If you Are on Call</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-help-from-a-cpe-escalation-manager-via-victorops-or-file-a-cpe-esc-mgmt-ticket">Getting Help From a CPE Escalation Manager via VictorOps or File a CPE Esc Mgmt Ticket</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#requesting-a-scheduled-override-if-you-re-going-to-be-out-when-you-re-on-call">Requesting a Scheduled Override (if you’re going to be out when you’re on call)</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Escalating Development.html">Escalating Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Escalating to Development.html">Escalating to Development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Escalation Manager.html">Escalation Manager</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Creating a Case for Escalation Managers (CPE Esc Mgmt).html">Creating a Case for Escalation Managers (CPE Esc Mgmt)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Working D-patches (aka Hotfixes).html">Working D-patches (aka Hotfixes)</a></li>
@@ -179,7 +181,7 @@
 <p>CPE uses VictorOps as the tool to manage team rotations and personal paging policies. To access VictorOps, use this link:</p>
 <p><a class="reference external" href="https://portal.victorops.com/client/solidfire">https://portal.victorops.com/client/solidfire</a></p>
 <p>When a “CPE DU/DL/DC” ticket is created in JIRA, if the “call-out” checkbox is checked, VictorOps will trigger the escalation policy defined for the cpe_on_fire team.</p>
-<p>..image:: onCall1.png</p>
+<img alt="_images/onCall1.png" src="_images/onCall1.png" />
 <p>This includes contacting the primary on-call person for the CPE team, the on-call manager and sending an email to the whole team. If the alert is not acknowledged within 10 minutes, then the secondary on-call person will be contacted. If the alert isn’t acknowledged within 10 minutes after reaching out to the secondary on-call person, then the on-call escalation manager will be contacted (again). The following picture shows the team policy as entered in VictorOps:</p>
 <img alt="_images/onCall2.png" src="_images/onCall2.png" />
 <div class="section" id="export-on-call-calenders-to-from-victorops-and-import-to-outlook-or-google">
@@ -208,6 +210,42 @@
 <li>You can also copy the Team Calendar and add it to your Outlook or Google Calendars, e.g.</li>
 </ul>
 </div></blockquote>
+<img alt="_images/onCall4.png" src="_images/onCall4.png" />
+<ul class="simple">
+<li>There is a predetermined range of phone numbers that VictorOps will use to contact you. They can be found here:  <a class="reference external" href="https://help.victorops.com/knowledge-base/victorops-phone-numbers/">https://help.victorops.com/knowledge-base/victorops-phone-numbers/</a></li>
+<li><dl class="first docutils">
+<dt>If you are called by VictorOps, acknowledge the alert by performing one of these actions:</dt>
+<dd><ul class="first last">
+<li>If contacted by phone, you can acknowledge the alert by pressing ‘4’.</li>
+<li>If contacted by SMS, you can acknowledge it by responding with the code that is provided in the SMS message.</li>
+<li>You can acknowledge the alert directly in the VictorOps app.</li>
+<li>You can acknowledge the alert by moving the corresponding CSD JIRA ticket from “in Queue” to “Fix in Progress”</li>
+<li>You can acknowledge the alert by assigning the CSD JIRA ticket to yourself.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>If you’re on-call you must acknowledge the alerts withing 20 minutes, and you must contact Support back within 30 minutes from the moment the CSD JIRA ticket was generated.</li>
+</ul>
+</div>
+<div class="section" id="getting-help-from-a-cpe-escalation-manager-via-victorops-or-file-a-cpe-esc-mgmt-ticket">
+<h2>Getting Help From a CPE Escalation Manager via VictorOps or File a CPE Esc Mgmt Ticket<a class="headerlink" href="#getting-help-from-a-cpe-escalation-manager-via-victorops-or-file-a-cpe-esc-mgmt-ticket" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference external" href="https://victorops.com">https://victorops.com</a></li>
+<li>Login</li>
+<li>Create Incident (this is in Green on the right side)</li>
+<li>Click on Send To -&gt; Escalation Policies -&gt; cpe_esc_mgmt</li>
+<li>Incident Desc : your phone number</li>
+<li>Incident Body : webex, details, hipchat, etc.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="requesting-a-scheduled-override-if-you-re-going-to-be-out-when-you-re-on-call">
+<h2>Requesting a Scheduled Override (if you’re going to be out when you’re on call)<a class="headerlink" href="#requesting-a-scheduled-override-if-you-re-going-to-be-out-when-you-re-on-call" title="Permalink to this headline">¶</a></h2>
+<p>VictorOps allows to request an override when you’re unavailable the same time you’re on call. For this, you should go to Settings -&gt; Scheduled, navigate to the bottom of the page and request an schedule override:</p>
+<img alt="_images/ops1.png" src="_images/ops1.png" />
+<p>Select the user being overridden (that should normally be you!), start date and end data, and everyone would get a notification with the request.</p>
 </div>
 </div>
 
@@ -219,7 +257,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Escalating Development.html" class="btn btn-neutral float-right" title="Escalating Development" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Escalating to Development.html" class="btn btn-neutral float-right" title="Escalating to Development" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="BugCourt.html" class="btn btn-neutral float-left" title="BugCourt" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

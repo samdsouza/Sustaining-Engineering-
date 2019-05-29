@@ -7,7 +7,7 @@ https://portal.victorops.com/client/solidfire
 
 When a "CPE DU/DL/DC" ticket is created in JIRA, if the "call-out" checkbox is checked, VictorOps will trigger the escalation policy defined for the cpe_on_fire team. 
 
-..image:: onCall1.png 
+.. image:: onCall1.png 
 
 This includes contacting the primary on-call person for the CPE team, the on-call manager and sending an email to the whole team. If the alert is not acknowledged within 10 minutes, then the secondary on-call person will be contacted. If the alert isn't acknowledged within 10 minutes after reaching out to the secondary on-call person, then the on-call escalation manager will be contacted (again). The following picture shows the team policy as entered in VictorOps: 
 
@@ -46,13 +46,37 @@ If you Are on Call
 .. image:: onCall4.png 
 
 
-	* There is a predetermined range of phone numbers that VictorOps will use to contact you. They can be found here:  https://help.victorops.com/knowledge-base/victorops-phone-numbers/
-	* If you are called by VictorOps, acknowledge the alert by performing one of these actions: 
-		* If contacted by phone, you can acknowledge the alert by pressing '4'. 
-		* If contacted by SMS, you can acknowledge it by responding with the code that is provided in the SMS message. 
-		* You can acknowledge the alert directly in the VictorOps app. 
-		* You can acknowledge the alert by moving the corresponding CSD JIRA ticket from "in Queue" to "Fix in Progress" 
-		* You can acknowledge the alert by assigning the CSD JIRA ticket to yourself. 
-	* If you're on-call you must acknowledge the alerts withing 20 minutes, and you must contact Support back within 30 minutes from the moment the CSD JIRA ticket was generated. 
+* There is a predetermined range of phone numbers that VictorOps will use to contact you. They can be found here:  https://help.victorops.com/knowledge-base/victorops-phone-numbers/
+* If you are called by VictorOps, acknowledge the alert by performing one of these actions: 
+	* If contacted by phone, you can acknowledge the alert by pressing '4'. 
+	* If contacted by SMS, you can acknowledge it by responding with the code that is provided in the SMS message. 
+	* You can acknowledge the alert directly in the VictorOps app. 
+	* You can acknowledge the alert by moving the corresponding CSD JIRA ticket from "in Queue" to "Fix in Progress" 
+	* You can acknowledge the alert by assigning the CSD JIRA ticket to yourself. 
+* If you're on-call you must acknowledge the alerts withing 20 minutes, and you must contact Support back within 30 minutes from the moment the CSD JIRA ticket was generated. 
+
+
+
+Getting Help From a CPE Escalation Manager via VictorOps or File a CPE Esc Mgmt Ticket
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+	* https://victorops.com
+	* Login 
+	* Create Incident (this is in Green on the right side) 
+	* Click on Send To -> Escalation Policies -> cpe_esc_mgmt 
+	* Incident Desc : your phone number 
+	* Incident Body : webex, details, hipchat, etc. 
+
+
+
+
+Requesting a Scheduled Override (if you're going to be out when you're on call) 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+VictorOps allows to request an override when you're unavailable the same time you're on call. For this, you should go to Settings -> Scheduled, navigate to the bottom of the page and request an schedule override: 
+
+.. image:: ops1.png 
+
+Select the user being overridden (that should normally be you!), start date and end data, and everyone would get a notification with the request.  
 
 

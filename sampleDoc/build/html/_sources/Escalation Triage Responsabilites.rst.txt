@@ -65,7 +65,7 @@ Escalation Triage Responsabilites
 .. note::
    Triage responsibility rotates with the on-call schedule; if you are on-call then you have the responsibility of triaging incoming cases. 
 
-   It's a good idea to have an idea of what issues and customers are "hot" at the time of your triaging; you can find a list of these cases **HERE**. If an issue comes in from a "   hot" customer, you should let a Sustaining Manager know.  
+   It's a good idea to have an idea of what issues and customers are "hot" at the time of your triaging; you can find a list of these cases `HERE <https://jira.ngage.netapp.com/secure/Dashboard.jspa?selectPageId=19728>`_. If an issue comes in from a "   hot" customer, you should let a Sustaining Manager know.  
 
 
 .. list-table:: **Triage Response Time Objectives**  
@@ -105,7 +105,7 @@ Escalation Priority
 
 .. image:: medium.png 
 
-.. image:: low.png 
+.. image:: lower.png 
 
 .. image:: lowest.png  
 

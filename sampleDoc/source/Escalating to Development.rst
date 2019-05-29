@@ -1,4 +1,4 @@
-Escalating to Development 
+Escalating to Development
 ===========================
 
 
@@ -42,7 +42,4 @@ The developer on-call who responds will, if needed, pull in the "2nd level" expe
 * If the veteran doesn't respond **within 10 minutes**, use the process to call the next person on the list
 * For new people we don't need to continue sending incidents. Chances are that at least one of the three people to whom the incident was addressed is going to acknowledge the alert and join the call
 * If no one has responded and you run out of people to call, contact the on-call CPE manager.
- 
-
-
 

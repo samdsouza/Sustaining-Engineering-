@@ -61,74 +61,76 @@ Basic Information
 		- If the files you are looking for are not on Stingray then try the same instructions as below but use "light" instead of "stingray" 
 
 
+Do the following to view logs on Stingray or to copy logs to bdr-scratch as needed.
 
 How to Access Data on Stingray via NFS / SSH (`KB Article <https://kb.netapp.com/app/answers/answer_view/a_id/1073688/>`_) : 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-	1. SSH to the RTP Cycle Servers: 
-		
-		ssh <netapp_username>@<stingray_name> 
-			For Example 
-		ssh dsouzas@cyclrtp.corp.netapp.com
-			Or 
-		ssh 10.103.161.239 
 
-	2. Login using SSO Credentials 
+Stingray via NFS / SSH:: 
+
+   1. SSH to the RTP Cycle Servers: 
+	ssh <netapp_username>@<stingray_name> 
+		For Example 
+	ssh dsouzas@cyclrtp.corp.netapp.com
+		Or 
+	SSH 10.103.161.239 
+
+   2. Login using SSO Credentials 
 		--> Use your shortname, i.e. "rossetto"; not "edward.rossetto"
 
-	3. Change directory to where "Stingray" is mounted: 
+   3. Change directory to where "Stingray" is mounted: 
 		cd /x/eng/cs-data/<case-number>
-
-	* For Example 
+	For Example:  
 		cd /x/eng/cs-data/2007564510
 
-	4. View, search, and manipulate the files as normal using cat, less, grep, etc. (your ssh'd into a regular ole Linux server). 
+   4. View, search, and manipulate the files as normal using cat, less, grep, etc. (your ssh'd into a regular ole Linux server). 
 
-		a. Home directories are persistent; so scripts, etc. can be copied and left on there for ease of log parsing 
+	a. Home directories are persistent; so scripts, etc. can be copied and left on there for ease of log parsing 
+
 
 How to Access Data on Stingray via CIFS / SMB: 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-	1. Using a file explorer / browser: 
-		:: \\stingray-smb.corp.netapp.com\\data\\<case-number> 
+Stingray via CIFS / SMB::
 
-	* Example 
-		:: \\stingray-smb.corp.netapp.com\\data\\2007564510 
+    1. Using a file explorer / browser: 
+	:: \\stingray-smb.corp.netapp.com\\data\\<case-number> 
+    Example:: 
+	:: \\stingray-smb.corp.netapp.com\\data\\2007564510 
 
 
 How to Access Stingray via HTTP: 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-	1. Using a web browser, go to: 
+Stingray via HTTP:: 
 
-		https://stingray.corp.netapp.com/<case-number>
-
-		* For Example 
-
-		https://stingray.corp.netapp.com/2007663350
+    1. Using a web browser, go to: 
+	https://stingray.corp.netapp.com/<case-number>
+    For Example: 
+	https://stingray.corp.netapp.com/2007663350
 
 How to transfer files from Stingray to BDR-scratch: 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-	1. Go to http://stingray.corp.netapp.com/<case-number> and determine the full HTTP path for the file that you would like to transfer. 
 
-		* Example: 
+Transfer files from Stringray to BDR:: 
 
-		http://stingray.corp.netapp.com/2007686225/2007686225.supportbundle.alln01-fab3-pib-az2-002.tar.gz
+    1. Go to http://stingray.corp.netapp.com/<case-number> and determine the full HTTP path for the file that you would like to transfer. 
+    
+    For Example: 
+	http://stingray.corp.netapp.com/2007686225/2007686225.supportbundle.alln01-fab3-pib-az2-002.tar.gz
 
-	2. Log into BDR-scratch 
+    2. Log into BDR-scratch 
 
+    3. If it has not already been done, create the directory to which you would like to copy the file. 
+	mkdir /scratch/support/JPMC_2007686225
 
-	3. If it has not already been done, create the directory to which you would like to copy the file. 
-		mkdir /scratch/support/JPMC_2007686225
-
-
-	4. Use wget to copy the file from Stingray to BDR-scratch 
-		wget <path-to-file-on-stingray> <path-to-directory-on-scratch> 
-
-	* Example 
-		wget http://stingray.corp.netapp.com/2007686225/2007686225.supportbundle.alln01-fab3-pib-az2-002.tar.gz /scratch/support/JPMC_2007686225
+    4. Use wget to copy the file from Stingray to BDR-scratch 
+	wget <path-to-file-on-stingray> <path-to-directory-on-scratch> 
+    For Example: 
+	wget http://stingray.corp.netapp.com/2007686225/2007686225.supportbundle.alln01-fab3-pib-az2-002.tar.gz /scratch/support/JPMC_2007686225
 
 Additional Notes 
 ^^^^^^^^^^^^^^^^
