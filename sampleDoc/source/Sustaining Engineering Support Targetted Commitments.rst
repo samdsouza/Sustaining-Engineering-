@@ -69,6 +69,23 @@ Here are the three targets Sustaining has agreed with Support for owning tickets
 	* All escalations with a status **"Need More Information"** will be updated **weekly** through case comments the "Escalation Next Steps" field. 
   
 
+To update an escalation: 
+
+1. Click 'Edit' 
+2. Add an update to the 'Escalation Next Steps' field and ensure the 'Sustaining Problem Descirption' is accurate
+
+.. image:: updateEscal1.png 
+
+3. Click 'Update' 
+
+Your update will appear at the top of the ticket above the customer account name and at the bottom of the ticket in the "Activity / All" section. See below: 
+
+.. image:: updateEscal2.png
+
+4. Add ticket comments to the bottom of the ticket as needed. 
+
+.. image:: updateEscal3.png 
+
 
 
 

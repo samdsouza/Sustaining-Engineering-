@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Incident Reviews &mdash; samply 0.0.1 documentation</title>
+  <title>How to Edit this Document &mdash; samply 0.0.1 documentation</title>
   
 
   
@@ -35,8 +35,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Quality Metrics" href="Quality Metrics.html" />
-    <link rel="prev" title="Sustaining Engineering Support Targetted Commitments" href="Sustaining Engineering Support Targetted Commitments.html" /> 
+    <link rel="prev" title="Acronyms" href="Acronyms.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -101,17 +100,14 @@
 <li class="toctree-l1"><a class="reference internal" href="Creating a Case for Escalation Managers (CPE Esc Mgmt).html">Creating a Case for Escalation Managers (CPE Esc Mgmt)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Working D-patches (aka Hotfixes).html">Working D-patches (aka Hotfixes)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sustaining Engineering Support Targetted Commitments.html">Sustaining Engineering Support Targetted Commitments</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Incident Reviews</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#when-to-have-an-incident-review">When to Have an Incident Review</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#how-to-request-an-incident-review">How to Request an Incident Review</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#incident-review-action-items">Incident Review Action Items</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#incident-review-meeting-notes">Incident Review Meeting Notes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#incident-review-dashboard-metrics">Incident Review Dashboard / Metrics</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="Incident Reviews.html">Incident Reviews</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Quality Metrics.html">Quality Metrics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Scratch Usage Policy.html">Scratch Usage Policy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Acronyms.html">Acronyms</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">How to Edit this Document</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#detailed-steps-for-installation">Detailed Steps for Installation</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -157,13 +153,13 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Incident Reviews</li>
+      <li>How to Edit this Document</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/Incident Reviews.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/How to Edit this Document.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -176,55 +172,54 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="incident-reviews">
-<h1>Incident Reviews<a class="headerlink" href="#incident-reviews" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="when-to-have-an-incident-review">
-<h2>When to Have an Incident Review<a class="headerlink" href="#when-to-have-an-incident-review" title="Permalink to this headline">¶</a></h2>
-<p>Incident reviews are technical discussions that happen on request and that involve representation from Support, Engineering (dev and test), CPE and Quality teams. During these meetings a summary of the case as well as the root cause are described and discussed. This information can be used by Support to be included in the final report to the customer.</p>
-<p>Incident reviews will be done for the following incidents:</p>
-<blockquote>
-<div><ul class="simple">
-<li>Every DL</li>
-<li>Every other AFA incident for which an incident has been requested (on-demand)</li>
-<li>Every incident related to HCL (i.e. Dev Vertical is set to HCL)</li>
-</ul>
-</div></blockquote>
-<p>The query (“PQR - Need Incident Review”) returns all the incidents that are due for an incident review.</p>
-<p>The query (“PQR - Scheduled Incident Reviews”) returns all incidents for which we have scheduled an incident review.</p>
-<p>The query (“PQR - Reviewed Incident Reviews”) returns all the incidents for which we had an incident review.</p>
+  <div class="section" id="how-to-edit-this-document">
+<h1>How to Edit this Document<a class="headerlink" href="#how-to-edit-this-document" title="Permalink to this headline">¶</a></h1>
+<p>This document is written in reStructuredText format. The content is stored at: <a class="reference external" href="https://github.com/samdsouza/Sustaining-Engineering">https://github.com/samdsouza/Sustaining-Engineering</a>-</p>
+<p>In order to add to / edit this document, clone the repository to your local machine</p>
+<img alt="_images/gitHubScreen.png" src="_images/gitHubScreen.png" />
+<p>A good place to reference in setting up this document is: <a class="reference external" href="https://docs.readthedocs.io/en/stable/intro/getting-started-with-sphinx.html">https://docs.readthedocs.io/en/stable/intro/getting-started-with-sphinx.html</a></p>
+<div class="section" id="detailed-steps-for-installation">
+<h2>Detailed Steps for Installation<a class="headerlink" href="#detailed-steps-for-installation" title="Permalink to this headline">¶</a></h2>
+<p>In order to edit this document, make sure python is installed on your machine,</p>
+<p>Begin by entering the directory you downloaded, ‘Sustaining-Engineering-‘</p>
+<p>You will then need to install sphinx:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install sphinx
+
+Enter the &#39;sampleDoc&#39; directory,
+
+$ sphinx-quickstart
+</pre></div>
 </div>
-<div class="section" id="how-to-request-an-incident-review">
-<h2>How to Request an Incident Review<a class="headerlink" href="#how-to-request-an-incident-review" title="Permalink to this headline">¶</a></h2>
-<p>In order to request an incident review the “Incident Review” field needs to be checked when creating or editing the case:</p>
-<img alt="_images/incident1.png" src="_images/incident1.png" />
-<p>The CPE/Incident Review Program Manager (or any other person designated for this) will be in charge to review the request, that a root cause has been identified, and to confirm that the team is ready for the discussion, and will also schedule the review. These items will exist in the “IR meeting to be scheduled” swim lane. When scheduling the review the “review data” field will be set. If the date is set, the items will be included in the “IR meeting schedule swim lane”.</p>
+<p>Quickstart will begin to walk you through the defaults, in most cases you can just accept the defaults but a thorough explanation of these defaults is found on: <a class="reference external" href="https://www.youtube.com/watch?v=oJsUvBQyHBs">https://www.youtube.com/watch?v=oJsUvBQyHBs</a></p>
+<p>After creating this document, you can now freely edit and add to the handbook.</p>
+<p>To preview the website / your changes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Enter the &#39;sampleDoc&#39; directory
+
+$ make html
+
+Sphinx will then build the html file with the given changes that have been added, and to view this file,
+
+$ open build/html/index.html
+
+You can now view this website in your web browser.
+</pre></div>
 </div>
-<div class="section" id="incident-review-action-items">
-<h2>Incident Review Action Items<a class="headerlink" href="#incident-review-action-items" title="Permalink to this headline">¶</a></h2>
-<p>Action items from the incident reviews will be created as sub-tasks (of the type action item) attatched to the CSD escalation that corresponds to the incident review:</p>
-<img alt="_images/incident2.png" src="_images/incident2.png" />
+<p>In order to add new pages / edit pages:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Enter the source directory
+
+Utilize a virtual machine and edit this documents in the terminal
+
+$ vim index.rst  // vim Monitoring\ Escalations.rst
+
+You must then press &quot;i&quot; in order to begin to make changes to this document
+
+Once the changes have been finalized, press &quot;esc&quot; and :wq to save these changes / :q! to discard these changes
+
+You can now rebuild your html file to view these changes in your web browser.
+</pre></div>
 </div>
-<div class="section" id="incident-review-meeting-notes">
-<h2>Incident Review Meeting Notes<a class="headerlink" href="#incident-review-meeting-notes" title="Permalink to this headline">¶</a></h2>
-<p>All notes from the Incident Reviews exist in Confluence. When a new incident review is scheduled, create a new incident review page using the ‘Incident Review 2018’ template. The page ‘Incident Review 2018’ includes a button (‘Create Incident Review’) that automatically creates a new page for the incident review using the mentioned template, as well as a table of contents with all the incident review pages:</p>
-<p><a class="reference external" href="https://confluence.ngage.netapp.com/display/IRE/Incident+Review+2018">Incident Review 2018</a></p>
-<img alt="_images/incident3.png" src="_images/incident3.png" />
-</div>
-<div class="section" id="incident-review-dashboard-metrics">
-<h2>Incident Review Dashboard / Metrics<a class="headerlink" href="#incident-review-dashboard-metrics" title="Permalink to this headline">¶</a></h2>
-<p>The board contians information about:</p>
-<blockquote>
-<div><ul class="simple">
-<li>List of pending incident reviews</li>
-<li>List of scheduled incident reviews</li>
-<li>List of completed incident reviews</li>
-<li>Pie chart with action items per category</li>
-<li>Pie chart with action items per status per category</li>
-<li>Pie chart with total number of incident reviews per status (pending, scheduled, done)</li>
-<li>Pie chart with defects opened</li>
-</ul>
-</div></blockquote>
-<p><a class="reference external" href="https://ngage.netapp.com/secure/Dashboard.jspa">https://ngage.netapp.com/secure/Dashboard.jspa</a>?selectPageId=19723#</p>
+<p>Good documentation to follow to make changes is shown here: <a class="reference external" href="http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html#colored-boxes-note-seealso-todo-and-warnings">http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html#colored-boxes-note-seealso-todo-and-warnings</a></p>
+<p>In order to push these changes to ‘Read The Docs’ and finalize your changes, make sure that your updates have been repushed to github, and login to readthedocs.org</p>
 </div>
 </div>
 
@@ -236,10 +231,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Quality Metrics.html" class="btn btn-neutral float-right" title="Quality Metrics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-      
-        <a href="Sustaining Engineering Support Targetted Commitments.html" class="btn btn-neutral float-left" title="Sustaining Engineering Support Targetted Commitments" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Acronyms.html" class="btn btn-neutral float-left" title="Acronyms" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

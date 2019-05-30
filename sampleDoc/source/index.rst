@@ -40,7 +40,7 @@ Table of Contents
    Quality Metrics 
    Scratch Usage Policy 
    Acronyms 
-
+   How to Edit this Document 
 
     
 
