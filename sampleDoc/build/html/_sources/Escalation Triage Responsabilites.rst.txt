@@ -1,98 +1,112 @@
-Escalation Triage Responsabilites 
+Escalation Triage Responsabilites
 =================================
 
-1. Watch "Need Triage" queue for incoming tickets. 
-    a. If ticket type = 'Solved DU/DL/DC' do the following:
- 
-	(I). Add "Element Version", "Components", other fields with as much detail as possible. 
+Triage responsability rotates with the on-call schedule; if you are on-call then you have the responsability of triaging incoming cases. 
 
-	(II). Take ownership of the ticket and immediately resolve it. There should be no asks from Sustaining in this ticket. The ticket is merely for tracking purposes. If there are asks from Sustaining in the ticket, move the ticket to a "CPE DU/DL/DC" ticket type and finish triaging the ticket as normal. 
- 
+* Response Time Objectives - Business Hours are 9-5 MT
+* Best Practices 
+* First Pass 
+* Second Pass 
+* 30 Minute Investigation 
+* Move to the FIFO Queue 
 
-    b. If the ticket is for a POC cluster, see a manager or team lead to discuss the escalation in more detail before exiting triage.
-
-    c. If a ticket comes in that is blatantly missing the majority of vital information and there is no indication that support did their due dilligence to investigate the issue before escalating, tag the "**Labels**" field with 'SupportIssue'. 
-
-	(I). **Note**: this will cause the Sustaining Management to follow up with Support Management about the case so don't mark this field lightly -- only when there are serious issues in the ticket. 
-
-
-2. When a new ticket comes in: 
-    a. Tag the ticket as being triaged by commenting - "Escalation triage - conducting first pass". 
-
-
-3. Review new tickets for completeness: 
-    a. Tag "Components" field 
-    b. Tag "Dev Vertical" field (Note: you need to click Edit to find this field). 
-
-	(I). "Dev Vertical" corresponds to what area of the organization this case relates to. 
-
-	(II). The options are: HCL, Platform, ELement or Ecosystem 
-	   
-		 (1). If the vertical is HCL, please add Stephanie Scheffler to the Watchers list. 
-    c. Accurate timeline of the issue. 
-
-	(I). Look for an issue start time/date and an issue resolved time/date. 
-    d. Check for correct log bundle path on scratch. 
-    e. If anything you deem is important is missing from the ticket, engage support with any clarifications/questions needef for the ticket.   
-
-
-4. If the ticket is missing vital information, move the ticket to "Need More Information". 
-    a. This will move the ticket to the "Need More Information (NMI)" queue. 
-    b. Return the ticket to "Need Triage" once support has replied and you feel sufficient information has been provided. 
-
-
-5. Once the ticket looks complete, begin a quick check of the logs, AIQ, or wherever is applicable to conduct a brief review of the case. 
-    a. Spend no moer than 30 minutes doing so. 
-
-
-6. Update the ticket with any findings or speculations found for the issue. 
-    a. Even if you are unable to conduct any quick review, add a comment to the case that it has been triaged and will be moved to the "Queue" status. 
+Response Time Objectives - Business Hours are 9-5 MT
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
 
-7. **Move the ticket to "In Queue" status.** 
+.. list-table:: **Triage Response Time Objectives**
+   :widths: 25 25 25 25
+   :header-rows: 1
+
+   * -
+     - Triaged
+     - Assigned
+     - Response from Assignee (Handshake, or ack back to Support) 
+   * - **Live (DU/DL/DC)**
+     - NA
+     - 20 minutes from escalation creation
+     - 30 minutes from escalation creation
+   * - **Type = DU/DL/DC or Priority-High**
+     - 2 business hours from escalation creation
+     - 4 business hours from escalation creation
+     - 8 business hours from escalation creation
+   * - **All other escalations**
+     - 2 business hours from escalation creation
+     - 12 business hours from escalation creation
+     - 2 business days from escalation creation
 
 
+Best Practices 
+^^^^^^^^^^^^^^
 
-8. **Notify team via HipChat in 'CPE-Support' room that a new ticket has been triaged and is ready to be picked up.** 
+* SCAT escalations are triaged by the SCAT (Sustaining Critical Accounts Team) team. 
+* Communicate with the 'reporter' support engineer LIVE where ever possible. 
+* The 'Issue Description' from support should include a detailed and targeted **timeline** and **problem statement**. This can dramatically shorten time to resolution. 
+* Push Support to provide detial where missing, such as volume ID's, node ID's, timestamps, slice ID's, etc.
+* Always add a 'Sustaining Problem Description'. 
+* If you need help, reach out. 
+
+First Pass
+^^^^^^^^^^
+
+Check that the required information is complete: 
+
+1. Is the account a SCAT (Sustianing Critical Accounts Team) account, eg, AT&T, JPMC. 
+	a. If yes, add a comment in HipChat room "SCAT" informing that "SCAT CSD-nnnn needs triage". 
+	b. If no, continue working through this document to triage the escalation. 
+2. Verify 'Type' is correct for this type of escalation described in the header: eg. if 'Header' = 'DU at Acme', make sure the 'Type' = 'CPE DU/DL/DC'. 
+3. Verify the following are present: 
+	a. "Element Version" 
+	b. "Support Case Number" 
+	c. "AIQ Link" 
+	d. "Scratch Data Link" (verify the dir contains the logs and that permissions are set correctly so you can extract logs.) Verify the permissions on the directory and log files is 775. 
+	e. "Issue Description" 
+4. If any of the above is missing, add a comment asking Suppprt for the missing information and reach out to Support. Otherwise, add a comment: **"first pass complete"**
 
 
+Second Pass 
+^^^^^^^^^^^
 
-9. **If a ticket has not been picked up that needs to be assigned, contact Sustaining Manager or manager on-call.** 
+Check that there is enough information to craft a sufficient 'Sustaining Problem Description': 
+
+1. Read carefully through the 'Issue Description'. The issue description should include: 
+	a. Technically detailed **timeline**; volume ID's, node ID's, slice service ID's, timestamps
+	b. Intial symptoms 
+	c. Customer Impact 
+	d. Customer Response 
+	e. Support Response 
+2. Look for evidence that Support made an attempt to investigate the problem. 
+3. If any of the above is missing, add a comment asking Support for the missing information. 
+4. Add the following: 
+	a. Dev Vertical 
+	b. Components (pick from list) 
+	c. Sustaining Problem Discretion 
+
+
+30 Minute Investigation
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Spend no more than 30 minutes investigating the problem. Look at AIQ, look at logs, dig into the timeline. Try to spot the cause/resolution without having the escalation assigned to an engineer. Then: 
+	1. Add a comment describing your research and findings. 
+	2. If the problem seems straightforward, assign the ticket to yourself. (Move the ticket to 'In Queue' before moving to 'Fix In Progress'. If you don't do that, the SLA timer keeps running)
+
+
+Move to the FIFO Queue
+^^^^^^^^^^^^^^^^^^^^^^
+
+1. Change the 'Status' to 'In Queue' 
+2. Add a comment to 'CPE-Support' HipChat room that ticket CSD-1234 has been triaged. 
+
+
 
 
 
 .. note::
-   Triage responsibility rotates with the on-call schedule; if you are on-call then you have the responsibility of triaging incoming cases. 
+   Triage responsibility rotates with the on-call schedule; if you are on-call then you have the responsability of triaging incoming cases. 
 
-   It's a good idea to have an idea of what issues and customers are "hot" at the time of your triaging; you can find a list of these cases `HERE <https://jira.ngage.netapp.com/secure/Dashboard.jspa?selectPageId=19728>`_. If an issue comes in from a "   hot" customer, you should let a Sustaining Manager know.  
-
-
-.. list-table:: **Triage Response Time Objectives**  
-   :widths: 25 25 25 25 
-   :header-rows: 1 
-
-   * -  
-     - Triaged 
-     - Assigned 
-     - Response from assignee 
-   * - **Live**
-     - NA 
-     - 20 minutes from escalation creation 
-     - 30 minutes from escalation creation 
-   * - **High**
-     - 2 business hours from escalation creation 
-     - 4 business hours from escalation creation 
-     - 8 business hours from escalation creation 
-   * - **Med**
-     - 2 business hours from escalation creation 
-     - 12 business hours from escalation creation 
-     - 2 business days from escalation creation 
-
-*Response Time Objectives - Business Hours are 9-5 MT*
-
-
-**The triage engineer can also adjust the priority of the escalation which by default, is not set, and labeled UNKNOWN** 
+   It's a good idea to have an idea of what issues and customers are "hot" at the time of your triaging; you can find a list of these cases `HERE <https://jira.ngage.netapp.com/secure/Dashboard.jspa?selectPageId=19728>`_. If an issue comes in from a "hot" customer, you should let a Sustaining Manger know. 
+ 
 
 
 Escalation Priority 

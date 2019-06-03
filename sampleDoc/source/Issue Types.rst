@@ -30,7 +30,7 @@ When opening an escalation, there are 4 external ticket types:
 .. figure:: SolvedDU.png 
    :alt: Solved DU/DL/DC 
 
-   Issues that are associated to a DU/DL/DC case that has been resolved by Support and that no require action from CPE. THese tickets are open to track quality metrics. 
+   Issues that are associated to a DU/DL/DC case that has been resolved by Support and that no require action from CPE. These tickets are open to track quality metrics. 
 
 .. figure:: emergencyCallout.png
    :alt: Emergency Call-Out 
@@ -47,7 +47,7 @@ There are also three issue types that are internal to CPE:
 .. figure:: dPatch.png
    :alt: D-patch 
 
-   (debug patch (aka HotFix in old SolidFire terms)): TIckets to track d-patch requests. 
+   (debug patch (aka HotFix in old SolidFire terms)): Tickets to track d-patch requests. 
 
 
 .. figure:: CPETest.png 

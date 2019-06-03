@@ -184,7 +184,7 @@
 <p>When a “CPE DU/DL/DC” ticket is created in JIRA, if the “call-out” checkbox is checked, VictorOps will trigger the escalation policy defined for the cpe_on_fire team.</p>
 <img alt="_images/onCall1.png" src="_images/onCall1.png" />
 <p>This includes contacting the primary on-call person for the CPE team, the on-call manager and sending an email to the whole team. If the alert is not acknowledged within 10 minutes, then the secondary on-call person will be contacted. If the alert isn’t acknowledged within 10 minutes after reaching out to the secondary on-call person, then the on-call escalation manager will be contacted (again). The following picture shows the team policy as entered in VictorOps:</p>
-<img alt="_images/onCall2.png" src="_images/onCall2.png" />
+<img alt="_images/VictorOpsPol.png" src="_images/VictorOpsPol.png" />
 <div class="section" id="export-on-call-calenders-to-from-victorops-and-import-to-outlook-or-google">
 <h2>Export on-call calenders to from VictorOps and import to Outlook or Google<a class="headerlink" href="#export-on-call-calenders-to-from-victorops-and-import-to-outlook-or-google" title="Permalink to this headline">¶</a></h2>
 <p>There are two on-call calenders in VictorOps; one for Engineer on-call (cpe-on-fire) and one for Manager on-call (cpe-esc-mgmt). You need to add both calendars to Outlook or Google.</p>
@@ -198,20 +198,20 @@
 <h2>Enter Personal Paging Policy<a class="headerlink" href="#enter-personal-paging-policy" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
-<li>If you’re part of the rotation team you should enter your contact information and your paging policy which describes how VictorOps should contact you if needed. You can do this in: VictorOps -&gt; Settings -&gt; Users -&gt; <strong>Edit your user</strong> .</li>
+<li>If you’re part of the rotation team you should enter your contact information and your paging policy which describes how VictorOps should contact you if needed. You can do this in the top right corner of VictorOps: &#64;YourUserName -&gt; Your Profile</li>
 </ul>
 </div></blockquote>
-<img alt="_images/onCall3.png" src="_images/onCall3.png" />
+<img alt="_images/victorOpsPolicy.png" src="_images/victorOpsPolicy.png" />
 </div>
 <div class="section" id="if-you-are-on-call">
 <h2>If you Are on Call<a class="headerlink" href="#if-you-are-on-call" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
-<li>If you’re part of the rotation policy you’ll be on-call eventually. To find out when you’ll be on-call you can check the VictorOps team calendar, which can be found in VictorOps -&gt; Settings -&gt; Teams -&gt; <strong>Select team cpe_on_fire</strong>.</li>
-<li>You can also copy the Team Calendar and add it to your Outlook or Google Calendars, e.g.</li>
+<li>If you’re part of the rotation policy you’ll be on-call eventually. To find out when you’ll be on-call you can check the VictorOps team calendar, which can be found as a ‘.ics’ file here:  <a class="reference external" href="https://portal.victorops.com/api/v1/org/solidfire/team/cpe_on_fire/calendar/C6DB2F688AAB498D9E812EADAF3C5924.ics">https://portal.victorops.com/api/v1/org/solidfire/team/cpe_on_fire/calendar/C6DB2F688AAB498D9E812EADAF3C5924.ics</a></li>
+<li>To find who is currently On-Call now, navigate to VictorOps -&gt; Settings -&gt; Teams -&gt; Select team <strong>cpe_on_fire</strong> -&gt; Rotations</li>
 </ul>
 </div></blockquote>
-<img alt="_images/onCall4.png" src="_images/onCall4.png" />
+<img alt="_images/VictorOpsRotate.png" src="_images/VictorOpsRotate.png" />
 <ul class="simple">
 <li>There is a predetermined range of phone numbers that VictorOps will use to contact you. They can be found here:  <a class="reference external" href="https://help.victorops.com/knowledge-base/victorops-phone-numbers/">https://help.victorops.com/knowledge-base/victorops-phone-numbers/</a></li>
 <li><dl class="first docutils">
@@ -235,17 +235,18 @@
 <div><ul class="simple">
 <li><a class="reference external" href="https://victorops.com">https://victorops.com</a></li>
 <li>Login</li>
-<li>Create Incident (this is in Green on the right side)</li>
+<li>Timeline Tab</li>
+<li>Create Incident (this is in Blue on the right side in the Incidents section)</li>
 <li>Click on Send To -&gt; Escalation Policies -&gt; cpe_esc_mgmt</li>
-<li>Incident Desc : your phone number</li>
+<li>Incident Description : your phone number</li>
 <li>Incident Body : webex, details, hipchat, etc.</li>
 </ul>
 </div></blockquote>
 </div>
 <div class="section" id="requesting-a-scheduled-override-if-you-re-going-to-be-out-when-you-re-on-call">
 <h2>Requesting a Scheduled Override (if you’re going to be out when you’re on call)<a class="headerlink" href="#requesting-a-scheduled-override-if-you-re-going-to-be-out-when-you-re-on-call" title="Permalink to this headline">¶</a></h2>
-<p>VictorOps allows to request an override when you’re unavailable the same time you’re on call. For this, you should go to Settings -&gt; Scheduled, navigate to the bottom of the page and request an schedule override:</p>
-<img alt="_images/ops1.png" src="_images/ops1.png" />
+<p>VictorOps allows to request an override when you’re unavailable the same time you’re on call. For this, you should go to Settings -&gt; Scheduled Overrides -&gt; Schedule an Override:</p>
+<img alt="_images/VictorOpsOverride.png" src="_images/VictorOpsOverride.png" />
 <p>Select the user being overridden (that should normally be you!), start date and end data, and everyone would get a notification with the request.</p>
 </div>
 </div>

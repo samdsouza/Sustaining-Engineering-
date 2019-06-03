@@ -13,22 +13,22 @@ The developer on-call who responds will, if needed, pull in the "2nd level" expe
 .. note::
    For PLATFORM, call directly using the numbers in the 'Platform' tab. For other than platform, use VictorOps (see below).
 
-* When escalating to development, create a manual incident using VictorOps. If for the team to which you're escalating the issue there are veteran and new sub-teams, create two incidents, one for 'veteran' and one for 'new'.
+* When escalating to development, create a manual incident using VictorOps. If for the team to which you're escalating the issue, there are veteran and new sub-teams, create two incidents, one for 'veteran' and one for 'new'.
 * To create an incident manually in VictorOps, follow these steps:
 
 
-.. image:: ops3.png
+.. image:: VictorOpsDashboard.png
 
 * Log in to VictorOps
 * In the 'Timeline' section, make sure that the sub-section 'Incidents' is selected
-* In the 'Incident' section, click the green button 'Create Incident'
+* In the 'Incident' section, click the blue button 'Create Incident'
 * Click on the 'Send To' box and select the users from the 'Users' tab:
 
-.. image:: ops4.png
+.. image:: VictorOpsCreate.png
 
 * start typing the name of the on-call developer and select it
 
-.. image:: ops5.png
+.. image:: VictorOpsDevelp.png
 
 * Populate 'Incident Description' following this format: 'Need immediate help with CSD-123- Call John at 555-123-4567', where John is 'you', CSD-123 is the JIRA ticket number and '555-123-4567' is your phone number.
 * If there is information about a meeting conference where the case is being discussed (e.g. webex, hipchat, gotomeeting) populate this information in the 'Incident Body' section.

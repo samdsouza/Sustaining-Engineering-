@@ -11,7 +11,7 @@ When a "CPE DU/DL/DC" ticket is created in JIRA, if the "call-out" checkbox is c
 
 This includes contacting the primary on-call person for the CPE team, the on-call manager and sending an email to the whole team. If the alert is not acknowledged within 10 minutes, then the secondary on-call person will be contacted. If the alert isn't acknowledged within 10 minutes after reaching out to the secondary on-call person, then the on-call escalation manager will be contacted (again). The following picture shows the team policy as entered in VictorOps: 
 
-.. image:: onCall2.png 
+.. image:: VictorOpsPol.png
 
 Export on-call calenders to from VictorOps and import to Outlook or Google 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -31,19 +31,20 @@ To import the calendar to Google or Outlook, add a calendar from file and select
 Enter Personal Paging Policy 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-	* If you're part of the rotation team you should enter your contact information and your paging policy which describes how VictorOps should contact you if needed. You can do this in: VictorOps -> Settings -> Users -> **Edit your user** . 
+	* If you're part of the rotation team you should enter your contact information and your paging policy which describes how VictorOps should contact you if needed. You can do this in the top right corner of VictorOps: @YourUserName -> Your Profile  
 
-.. image:: onCall3.png 
+.. image:: victorOpsPolicy.png 
 
 
 If you Are on Call 
 ^^^^^^^^^^^^^^^^^^^
 
-	* If you're part of the rotation policy you'll be on-call eventually. To find out when you'll be on-call you can check the VictorOps team calendar, which can be found in VictorOps -> Settings -> Teams -> **Select team cpe_on_fire**. 
-	* You can also copy the Team Calendar and add it to your Outlook or Google Calendars, e.g. 
+	* If you're part of the rotation policy you'll be on-call eventually. To find out when you'll be on-call you can check the VictorOps team calendar, which can be found as a '.ics' file here:  https://portal.victorops.com/api/v1/org/solidfire/team/cpe_on_fire/calendar/C6DB2F688AAB498D9E812EADAF3C5924.ics
+ 
+	* To find who is currently On-Call now, navigate to VictorOps -> Settings -> Teams -> Select team **cpe_on_fire** -> Rotations  
 
 
-.. image:: onCall4.png 
+.. image:: VictorOpsRotate.png
 
 
 * There is a predetermined range of phone numbers that VictorOps will use to contact you. They can be found here:  https://help.victorops.com/knowledge-base/victorops-phone-numbers/
@@ -62,9 +63,10 @@ Getting Help From a CPE Escalation Manager via VictorOps or File a CPE Esc Mgmt 
 
 	* https://victorops.com
 	* Login 
-	* Create Incident (this is in Green on the right side) 
+	* Timeline Tab 
+	* Create Incident (this is in Blue on the right side in the Incidents section) 
 	* Click on Send To -> Escalation Policies -> cpe_esc_mgmt 
-	* Incident Desc : your phone number 
+	* Incident Description : your phone number 
 	* Incident Body : webex, details, hipchat, etc. 
 
 
@@ -73,9 +75,9 @@ Getting Help From a CPE Escalation Manager via VictorOps or File a CPE Esc Mgmt 
 Requesting a Scheduled Override (if you're going to be out when you're on call) 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
 
-VictorOps allows to request an override when you're unavailable the same time you're on call. For this, you should go to Settings -> Scheduled, navigate to the bottom of the page and request an schedule override: 
+VictorOps allows to request an override when you're unavailable the same time you're on call. For this, you should go to Settings -> Scheduled Overrides -> Schedule an Override: 
 
-.. image:: ops1.png 
+.. image:: VictorOpsOverride.png
 
 Select the user being overridden (that should normally be you!), start date and end data, and everyone would get a notification with the request.  
 

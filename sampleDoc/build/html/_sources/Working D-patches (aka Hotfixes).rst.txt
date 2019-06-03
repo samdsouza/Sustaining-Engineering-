@@ -141,7 +141,7 @@ Working Defects found against a D-Patch during testing
 Final Release Steps 
 ^^^^^^^^^^^^^^^^^^^
 
-An SBR ticket should have been created once the Manifest taxonomy (top portion describing the D-Patch) is complete to give Build & Release team a heads up and they can start planning for the D-Patch release. If this ticket was not created earlier create the ticket in the SBR project. 
+An SBR ticket should have been created once the Manifest taxonomy (top portion describing the D-Patch) is complete to give the Build & Release team a heads up so they can start planning for the D-Patch release. If this ticket was not created earlier create the ticket in the SBR project. 
 
 	* (Dev) Update or Submit a SF Build and Release Service Request (SBR) nGage ticket using the following template. The answers below are typical answers in most cases. 
 

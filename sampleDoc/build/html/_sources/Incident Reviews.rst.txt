@@ -25,7 +25,7 @@ In order to request an incident review the "Incident Review" field needs to be c
 
 .. image:: incident1.png 
 
-The CPE/Incident Review Program Manager (or any other person designated for this) will be in charge to review the request, that a root cause has been identified, and to confirm that the team is ready for the discussion, and will also schedule the review. These items will exist in the "IR meeting to be scheduled" swim lane. When scheduling the review the "review data" field will be set. If the date is set, the items will be included in the "IR meeting schedule swim lane". 
+The CPE/Incident Review Program Manager (or any other person designated for this) will be in charge to review the request, that a root cause has been identified, and to confirm that the team is ready for the discussion, and will also schedule the review. These items will exist in the "IR meeting to be scheduled" swim lane. When scheduling the review the "review date" field will be set. If the date is set, the items will be included in the "IR meeting schedule swim lane". 
 
 
 Incident Review Action Items

@@ -1,7 +1,7 @@
 Hardware RCA | FA etc 
 =================================
 
-SFG Sustaining Engineering will not hangle hand hardware Failure Analysis (FA) for drives, nodes etc. NetApp has a group that will handle this and the process is documented on 
+SFG Sustaining Engineering will not handle hardware Failure Analysis (FA) for drives, nodes etc. NetApp has a group that will handle this and the process is documented on 
 
 http://csops.netapp.com/customer-support-delivery/rca/
 

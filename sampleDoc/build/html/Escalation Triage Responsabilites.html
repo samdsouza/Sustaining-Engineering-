@@ -85,6 +85,12 @@
 <li class="toctree-l1"><a class="reference internal" href="Definitions.html">Definitions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Monitoring Escalations.html">Monitoring Escalations</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Escalation Triage Responsabilites</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#response-time-objectives-business-hours-are-9-5-mt">Response Time Objectives - Business Hours are 9-5 MT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#best-practices">Best Practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#first-pass">First Pass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#second-pass">Second Pass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#minute-investigation">30 Minute Investigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#move-to-the-fifo-queue">Move to the FIFO Queue</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#escalation-priority">Escalation Priority</a></li>
 </ul>
 </li>
@@ -175,99 +181,17 @@
             
   <div class="section" id="escalation-triage-responsabilites">
 <h1>Escalation Triage Responsabilites<a class="headerlink" href="#escalation-triage-responsabilites" title="Permalink to this headline">¶</a></h1>
-<ol class="arabic">
-<li><dl class="first docutils">
-<dt>Watch “Need Triage” queue for incoming tickets.</dt>
-<dd><ol class="first last loweralpha">
-<li><p class="first">If ticket type = ‘Solved DU/DL/DC’ do the following:</p>
-<blockquote>
-<div><p>(I). Add “Element Version”, “Components”, other fields with as much detail as possible.</p>
-<p>(II). Take ownership of the ticket and immediately resolve it. There should be no asks from Sustaining in this ticket. The ticket is merely for tracking purposes. If there are asks from Sustaining in the ticket, move the ticket to a “CPE DU/DL/DC” ticket type and finish triaging the ticket as normal.</p>
-</div></blockquote>
-</li>
-<li><p class="first">If the ticket is for a POC cluster, see a manager or team lead to discuss the escalation in more detail before exiting triage.</p>
-</li>
-<li><p class="first">If a ticket comes in that is blatantly missing the majority of vital information and there is no indication that support did their due dilligence to investigate the issue before escalating, tag the “<strong>Labels</strong>” field with ‘SupportIssue’.</p>
-<blockquote>
-<div><p>(I). <strong>Note</strong>: this will cause the Sustaining Management to follow up with Support Management about the case so don’t mark this field lightly – only when there are serious issues in the ticket.</p>
-</div></blockquote>
-</li>
-</ol>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>When a new ticket comes in:</dt>
-<dd><ol class="first last loweralpha simple">
-<li>Tag the ticket as being triaged by commenting - “Escalation triage - conducting first pass”.</li>
-</ol>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>Review new tickets for completeness:</dt>
-<dd><ol class="first last loweralpha">
-<li><p class="first">Tag “Components” field</p>
-</li>
-<li><p class="first">Tag “Dev Vertical” field (Note: you need to click Edit to find this field).</p>
-<blockquote>
-<div><p>(I). “Dev Vertical” corresponds to what area of the organization this case relates to.</p>
-<p>(II). The options are: HCL, Platform, ELement or Ecosystem</p>
-<blockquote>
-<div><p>(1). If the vertical is HCL, please add Stephanie Scheffler to the Watchers list.</p>
-</div></blockquote>
-</div></blockquote>
-</li>
-<li><p class="first">Accurate timeline of the issue.</p>
-<blockquote>
-<div><p>(I). Look for an issue start time/date and an issue resolved time/date.</p>
-</div></blockquote>
-</li>
-<li><p class="first">Check for correct log bundle path on scratch.</p>
-</li>
-<li><p class="first">If anything you deem is important is missing from the ticket, engage support with any clarifications/questions needef for the ticket.</p>
-</li>
-</ol>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>If the ticket is missing vital information, move the ticket to “Need More Information”.</dt>
-<dd><ol class="first last loweralpha simple">
-<li>This will move the ticket to the “Need More Information (NMI)” queue.</li>
-<li>Return the ticket to “Need Triage” once support has replied and you feel sufficient information has been provided.</li>
-</ol>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>Once the ticket looks complete, begin a quick check of the logs, AIQ, or wherever is applicable to conduct a brief review of the case.</dt>
-<dd><ol class="first last loweralpha simple">
-<li>Spend no moer than 30 minutes doing so.</li>
-</ol>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>Update the ticket with any findings or speculations found for the issue.</dt>
-<dd><ol class="first last loweralpha simple">
-<li>Even if you are unable to conduct any quick review, add a comment to the case that it has been triaged and will be moved to the “Queue” status.</li>
-</ol>
-</dd>
-</dl>
-</li>
-<li><p class="first"><strong>Move the ticket to “In Queue” status.</strong></p>
-</li>
-<li><p class="first"><strong>Notify team via HipChat in ‘CPE-Support’ room that a new ticket has been triaged and is ready to be picked up.</strong></p>
-</li>
-<li><p class="first"><strong>If a ticket has not been picked up that needs to be assigned, contact Sustaining Manager or manager on-call.</strong></p>
-</li>
-</ol>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p>Triage responsibility rotates with the on-call schedule; if you are on-call then you have the responsibility of triaging incoming cases.</p>
-<p class="last">It’s a good idea to have an idea of what issues and customers are “hot” at the time of your triaging; you can find a list of these cases <a class="reference external" href="https://jira.ngage.netapp.com/secure/Dashboard.jspa?selectPageId=19728">HERE</a>. If an issue comes in from a ”   hot” customer, you should let a Sustaining Manager know.</p>
-</div>
+<p>Triage responsability rotates with the on-call schedule; if you are on-call then you have the responsability of triaging incoming cases.</p>
+<ul class="simple">
+<li>Response Time Objectives - Business Hours are 9-5 MT</li>
+<li>Best Practices</li>
+<li>First Pass</li>
+<li>Second Pass</li>
+<li>30 Minute Investigation</li>
+<li>Move to the FIFO Queue</li>
+</ul>
+<div class="section" id="response-time-objectives-business-hours-are-9-5-mt">
+<h2>Response Time Objectives - Business Hours are 9-5 MT<a class="headerlink" href="#response-time-objectives-business-hours-are-9-5-mt" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="colwidths-given docutils" id="id1">
 <caption><span class="caption-text"><strong>Triage Response Time Objectives</strong></span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
 <colgroup>
@@ -280,29 +204,121 @@
 <tr class="row-odd"><th class="head">&#160;</th>
 <th class="head">Triaged</th>
 <th class="head">Assigned</th>
-<th class="head">Response from assignee</th>
+<th class="head">Response from Assignee (Handshake, or ack back to Support)</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td><strong>Live</strong></td>
+<tr class="row-even"><td><strong>Live (DU/DL/DC)</strong></td>
 <td>NA</td>
 <td>20 minutes from escalation creation</td>
 <td>30 minutes from escalation creation</td>
 </tr>
-<tr class="row-odd"><td><strong>High</strong></td>
+<tr class="row-odd"><td><strong>Type = DU/DL/DC or Priority-High</strong></td>
 <td>2 business hours from escalation creation</td>
 <td>4 business hours from escalation creation</td>
 <td>8 business hours from escalation creation</td>
 </tr>
-<tr class="row-even"><td><strong>Med</strong></td>
+<tr class="row-even"><td><strong>All other escalations</strong></td>
 <td>2 business hours from escalation creation</td>
 <td>12 business hours from escalation creation</td>
 <td>2 business days from escalation creation</td>
 </tr>
 </tbody>
 </table>
-<p><em>Response Time Objectives - Business Hours are 9-5 MT</em></p>
-<p><strong>The triage engineer can also adjust the priority of the escalation which by default, is not set, and labeled UNKNOWN</strong></p>
+</div>
+<div class="section" id="best-practices">
+<h2>Best Practices<a class="headerlink" href="#best-practices" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>SCAT escalations are triaged by the SCAT (Sustaining Critical Accounts Team) team.</li>
+<li>Communicate with the ‘reporter’ support engineer LIVE where ever possible.</li>
+<li>The ‘Issue Description’ from support should include a detailed and targeted <strong>timeline</strong> and <strong>problem statement</strong>. This can dramatically shorten time to resolution.</li>
+<li>Push Support to provide detial where missing, such as volume ID’s, node ID’s, timestamps, slice ID’s, etc.</li>
+<li>Always add a ‘Sustaining Problem Description’.</li>
+<li>If you need help, reach out.</li>
+</ul>
+</div>
+<div class="section" id="first-pass">
+<h2>First Pass<a class="headerlink" href="#first-pass" title="Permalink to this headline">¶</a></h2>
+<p>Check that the required information is complete:</p>
+<ol class="arabic simple">
+<li><dl class="first docutils">
+<dt>Is the account a SCAT (Sustianing Critical Accounts Team) account, eg, AT&amp;T, JPMC.</dt>
+<dd><ol class="first last loweralpha">
+<li>If yes, add a comment in HipChat room “SCAT” informing that “SCAT CSD-nnnn needs triage”.</li>
+<li>If no, continue working through this document to triage the escalation.</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li>Verify ‘Type’ is correct for this type of escalation described in the header: eg. if ‘Header’ = ‘DU at Acme’, make sure the ‘Type’ = ‘CPE DU/DL/DC’.</li>
+<li><dl class="first docutils">
+<dt>Verify the following are present:</dt>
+<dd><ol class="first last loweralpha">
+<li>“Element Version”</li>
+<li>“Support Case Number”</li>
+<li>“AIQ Link”</li>
+<li>“Scratch Data Link” (verify the dir contains the logs and that permissions are set correctly so you can extract logs.) Verify the permissions on the directory and log files is 775.</li>
+<li>“Issue Description”</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li>If any of the above is missing, add a comment asking Suppprt for the missing information and reach out to Support. Otherwise, add a comment: <strong>“first pass complete”</strong></li>
+</ol>
+</div>
+<div class="section" id="second-pass">
+<h2>Second Pass<a class="headerlink" href="#second-pass" title="Permalink to this headline">¶</a></h2>
+<p>Check that there is enough information to craft a sufficient ‘Sustaining Problem Description’:</p>
+<ol class="arabic simple">
+<li><dl class="first docutils">
+<dt>Read carefully through the ‘Issue Description’. The issue description should include:</dt>
+<dd><ol class="first last loweralpha">
+<li>Technically detailed <strong>timeline</strong>; volume ID’s, node ID’s, slice service ID’s, timestamps</li>
+<li>Intial symptoms</li>
+<li>Customer Impact</li>
+<li>Customer Response</li>
+<li>Support Response</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li>Look for evidence that Support made an attempt to investigate the problem.</li>
+<li>If any of the above is missing, add a comment asking Support for the missing information.</li>
+<li><dl class="first docutils">
+<dt>Add the following:</dt>
+<dd><ol class="first last loweralpha">
+<li>Dev Vertical</li>
+<li>Components (pick from list)</li>
+<li>Sustaining Problem Discretion</li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+</div>
+<div class="section" id="minute-investigation">
+<h2>30 Minute Investigation<a class="headerlink" href="#minute-investigation" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Spend no more than 30 minutes investigating the problem. Look at AIQ, look at logs, dig into the timeline. Try to spot the cause/resolution without having the escalation assigned to an engineer. Then:</dt>
+<dd><ol class="first last arabic simple">
+<li>Add a comment describing your research and findings.</li>
+<li>If the problem seems straightforward, assign the ticket to yourself. (Move the ticket to ‘In Queue’ before moving to ‘Fix In Progress’. If you don’t do that, the SLA timer keeps running)</li>
+</ol>
+</dd>
+</dl>
+</div>
+<div class="section" id="move-to-the-fifo-queue">
+<h2>Move to the FIFO Queue<a class="headerlink" href="#move-to-the-fifo-queue" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Change the ‘Status’ to ‘In Queue’</li>
+<li>Add a comment to ‘CPE-Support’ HipChat room that ticket CSD-1234 has been triaged.</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Triage responsibility rotates with the on-call schedule; if you are on-call then you have the responsability of triaging incoming cases.</p>
+<p class="last">It’s a good idea to have an idea of what issues and customers are “hot” at the time of your triaging; you can find a list of these cases <a class="reference external" href="https://jira.ngage.netapp.com/secure/Dashboard.jspa?selectPageId=19728">HERE</a>. If an issue comes in from a “hot” customer, you should let a Sustaining Manger know.</p>
+</div>
+</div>
 <div class="section" id="escalation-priority">
 <h2>Escalation Priority<a class="headerlink" href="#escalation-priority" title="Permalink to this headline">¶</a></h2>
 <img alt="_images/highest.png" src="_images/highest.png" />

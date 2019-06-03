@@ -64,9 +64,9 @@ Here are the three targets Sustaining has agreed with Support for owning tickets
 
 	* Sustaining engineers are expected to have a queue depth of no more than **seven** escalations of which only **two** should be **"Fix In Progress"**. 
 
-	* All escalations with a status **"Fix In Progress"** will be updated **daily** through case comments the "Escalation Next Steps" field. 
+	* All escalations with a status **"Fix In Progress"** will be updated **daily** through case comments in the "Escalation Next Steps" field. 
 
-	* All escalations with a status **"Need More Information"** will be updated **weekly** through case comments the "Escalation Next Steps" field. 
+	* All escalations with a status **"Need More Information"** will be updated **weekly** through case comments in the "Escalation Next Steps" field. 
   
 
 To update an escalation: 

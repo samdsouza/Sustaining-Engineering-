@@ -8,14 +8,14 @@ While the Escalations is being Worked by CPE
 
     * Keep the escalation/CSD ticket in the "Fix in Progress" staus 
 
-    * Provide **DAILY** ticket updates for all tickets you own, regardless of region, where the status is "in progress", and use the template: 
+    * Provide **DAILY** ticket updates for all tickets you own, regardless of region, where the status is "Fix In Progress", and use the template: 
 	
 	* **What**
 	* **What Next** 
 	* **Who**
 	* **When** 
 
-    * Use external comments when entering comments to be shared with developers, support and CPE(any one with a JIRA license will be able to see these comments)
+    * Use external comments when entering comments to be shared with developers, support and CPE (any one with a JIRA license will be able to see these comments)
 
     * Use internal comments when entering internal comments. These comments will only be visible to CPE members. 
 

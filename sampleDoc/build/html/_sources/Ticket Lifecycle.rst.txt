@@ -51,7 +51,7 @@ The following statuses may exist for an escalation of the type: CPE DU/DL/DC, CP
    Reopened: Issues that were resolved and that have been reopened. 
 
 
-Below, the escalation ticket managment is shown, 
+Below, the escalation ticket managment cycle is shown, 
 
 .. image:: flowChart.png 
 
