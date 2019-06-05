@@ -16,5 +16,5 @@ To assign an escalation take these actions:
 HI and AIQ Escalations
 ^^^^^^^^^^^^^^^^^^^^^^
 
-	* If the escalation belongs to the HI and AIQ area, it should still be owned by CPE. The goal is to build HI and AIQ knowledge within the CPE team. Main challenges include the frequency of escalation related to these components and the effectiveness of building enough practical knowledge given that opportunities to troubleshoot these product failures may be scarce. An option could be to have a couple of people dedicated to these issues (for redundancy), and eventually rotate them. 
+	* If the escalation belongs to the HI (Host Integration) and AIQ area (Active IQ area), it should still be owned by CPE. The goal is to build HI and AIQ knowledge within the CPE team. Main challenges include the frequency of escalation related to these components and the effectiveness of building enough practical knowledge given that opportunities to troubleshoot these product failures may be scarce. An option could be to have a couple of people dedicated to these issues (for redundancy), and eventually rotate them. 
 

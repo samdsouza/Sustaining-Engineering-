@@ -9,8 +9,8 @@ Incident reviews are technical discussions that happen on request and that invol
 Incident reviews will be done for the following incidents: 
 
 	* Every DL
-	* Every other AFA incident for which an incident has been requested (on-demand) 
-	* Every incident related to HCL (i.e. Dev Vertical is set to HCL) 
+	* Every other AFA (All Flash Arrays) incident for which an incident has been requested (on-demand) 
+	* Every incident related to HCI (Hyper Converge Infastructure) (i.e. Dev Vertical is set to HCI) 
 
 The query ("PQR - Need Incident Review") returns all the incidents that are due for an incident review. 
 

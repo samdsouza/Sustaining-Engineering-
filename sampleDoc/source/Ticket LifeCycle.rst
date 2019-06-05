@@ -148,7 +148,7 @@ Hotfix/IDR/D-patches
 .. figure:: finalize.png 
    :alt: Finalize 
 
-   This status includes build and push to brickftp actions. 
+   This status includes build and push to NSS (NetApp Support Site) actions. 
 
 
 .. figure:: resolved.png 

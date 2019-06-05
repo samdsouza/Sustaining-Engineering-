@@ -5,7 +5,7 @@ The following fields must be filled out ot gather quality data (used by the DSA 
 
 (Default Tab) 
 
-	* Outage Data 
+	* Outage Date 
 	* Outage Duration (only for DU cases) 
 
 

@@ -15,14 +15,12 @@ While the Escalations is being Worked by CPE
 	* **Who**
 	* **When** 
 
-    * Use external comments when entering comments to be shared with developers, support and CPE (any one with a JIRA license will be able to see these comments)
-
-    * Use internal comments when entering internal comments. These comments will only be visible to CPE members. 
+    * Use external comments when entering comments to be shared with developers, support and CPE (any one with a JIRA license will be able to see these comments) 
 
     * **Update the Outage information in the 'default' and 'outage' tabs to include important information used to gather quality metrics. This includes:**
 	
 	* (Default tab) 
-		* Outage Data 
+		* Outage Date
 		* Outage Duration (only for DU cases) 
 
 	* (Outage tab) 
@@ -163,8 +161,11 @@ If the Escalation has a Defect Associated To It
 	* As the owner of the escalation, you own the defect until it gets discussed and approved in the corresponding bugcourt. 
 	* If this is a new defect, create a defect in the corresponding backlog (the one for the engineering team responsible to analyze the request), and link the escalation case to it using the 'Product Defect Case' field in the corresponding 'Edit' screen. 
 	* If this is an exisiting defect, link the escalation to it using the 'Product Defect Case' field in the corresponding 'Edit' screen. 
-	* **Put the image from confluence in here!!!!** 
-	* The JIRA escalations are linked to defects using the 'linked issues' field AND the 'Product Defect number' field. Ideally we would only use the 'linked issues' field but unfortunately this doesn't allow to link to Fogbugz or other bug tracking tools different than JIRA. 
+
+.. image:: case23.png
+ 
+
+* The JIRA escalations are linked to defects using the 'linked issues' field AND the 'Product Defect number' field. Ideally we would only use the 'linked issues' field but unfortunately this doesn't allow to link to Fogbugz or other bug tracking tools different than JIRA. 
 
 
 	* As the owner of the escalation, keep the escalation open until
