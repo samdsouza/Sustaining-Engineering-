@@ -79,7 +79,7 @@ Check that there is enough information to craft a sufficient 'Sustaining Problem
 2. Look for evidence that Support made an attempt to investigate the problem. 
 3. If any of the above is missing, add a comment asking Support for the missing information. 
 4. Add the following: 
-	a. Dev Vertical 
+	a. Dev Vertical (pick from list, ex, Element, Platforms, Ecosystem, HCI) 
 	b. Components (pick from list) 
 	c. Sustaining Problem Discretion 
 
@@ -103,9 +103,7 @@ Move to the FIFO Queue
 
 
 .. note::
-   Triage responsibility rotates with the on-call schedule; if you are on-call then you have the responsability of triaging incoming cases. 
-
-   It's a good idea to have an idea of what issues and customers are "hot" at the time of your triaging; you can find a list of these cases `HERE <https://jira.ngage.netapp.com/secure/Dashboard.jspa?selectPageId=19728>`_. If an issue comes in from a "hot" customer, you should let a Sustaining Manger know. 
+   Triage responsibility rotates with the on-call schedule; if you are on-call then you have the responsability of triaging incoming cases.  
  
 
 

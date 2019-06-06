@@ -29,7 +29,7 @@ Enhancements
 Triage
 ^^^^^^
 
-**Triage:** Triage or triaging an escalation, is the intial check for completeness of an escalation sent from Support to Sustaining. The triage engineer must check the case makes sense, the problem description is complete, the customer impact is complete, the timeline of the issue is included in the escalation and log files are complete, accurate, and have been given read and write access.
+**Triage:** Triage or triaging an escalation, is the intial check for completeness of an escalation sent from Support to Sustaining. The triage engineer must check the case makes sense, the problem description is complete, the customer impact is complete, the timeline of the issue is included in the escalation and log files are complete, accurate, and have been given read and write access. More information can be found on the **`Escalation-Traige-Responsabilites`** page. 
 
 
 Epic

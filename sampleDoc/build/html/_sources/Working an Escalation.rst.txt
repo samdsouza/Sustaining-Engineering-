@@ -171,7 +171,7 @@ If the Escalation has a Defect Associated To It
 	* As the owner of the escalation, keep the escalation open until
 		* The change has been committed to a branch, 
 		* It's been communicated to Support, and Support agrees to close the escalation. 
-	* The escalation will remain open in the status 'Fix in Progress' until the fix is committed to a branch (this is part of the bug workflow that Lisa owns, so we can ask her for more details). 
+	* The escalation will remain open in the status 'Fix in Progress' until the fix is committed to a branch. 
 	* Once the code changes have been committed to a branch, the escalation issue shall be transitioned to 'Waiting for Release' until the changes are released. 
 	* Once the release with code changes have been made available to Support, the escalation issue can be closed. 
 	* If the escalation needs a hotfix or an IDR (Interim Diagnostic Relief), follow `hotfix <https://confluence.ngage.netapp.com/display/HIG/Hotfix+%28patch%29+Release+Process>`_ process to enter a hotfix ticket and link the escalation case to it. 

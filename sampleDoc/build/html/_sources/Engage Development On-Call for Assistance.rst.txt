@@ -1,5 +1,5 @@
-Escalating to Development
-===========================
+Engage Development On-Call for Assistance
+=========================================
 
 
 * Regardless of the time of day, if you need to get other engineers or developers involved, use this spreadsheet to determine who is on call: https://docs.google.com/spreadsheets/d/11KVhEIXoFLx_k9Xq7uz10uXoAxS61f_ZoakOBH44DBc/edit#gid=778471159
@@ -38,7 +38,6 @@ The developer on-call who responds will, if needed, pull in the "2nd level" expe
 
 * When creating two incidents (one for veteran and one for new), use the same description and body
 * Create one manual incident and address it to a veteran (from the veteran tab)
-* Create one manual incident and address it to the `cpe_dev_element_newbie <https://portal.victorops.com/auth-link?resume=/sp/k5bUm/resume/sp/ACS.ping&idpentity=http://sts.netapp.com/adfs/services/trust>`_ team in VictorOps.
 * If the veteran doesn't respond **within 10 minutes**, use the process to call the next person on the list
 * For new people we don't need to continue sending incidents. Chances are that at least one of the three people to whom the incident was addressed is going to acknowledge the alert and join the call
 * If no one has responded and you run out of people to call, contact the on-call CPE manager.
